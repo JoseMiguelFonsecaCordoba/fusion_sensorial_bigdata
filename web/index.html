@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fusión Sensorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0d14; --panel: #131725; --panel-2: #1a1f31; --line: #262c44;
+    --text: #e9ecf5; --muted: #8d94ad; --accent: #ff6a3d; --accent-2: #7c5cff;
+    --good: #2fd38b; --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+    font: 15px/1.5 Inter, system-ui, sans-serif;
+  }
+  body::before {
+    content: ""; position: fixed; inset: -20vmax; z-index: -1; pointer-events: none;
+    background: radial-gradient(40vmax 40vmax at 15% 10%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 70%),
+                radial-gradient(45vmax 45vmax at 90% 30%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%);
+    transition: background .6s;
+  }
+  h1, h2, h3 { font-family: "Space Grotesk", Inter, sans-serif; margin: 0; letter-spacing: -.02em; }
+  header { padding: 32px 24px 8px; max-width: 1280px; margin: 0 auto; }
+  header h1 { font-size: clamp(28px, 5vw, 44px); }
+  header h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header p { color: var(--muted); margin: 6px 0 0; max-width: 680px; }
+  main { display: grid; grid-template-columns: 380px 1fr; gap: 24px; padding: 24px; max-width: 1280px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 16px; } header { padding: 24px 16px 0; } }
+
+  .panel { background: color-mix(in srgb, var(--panel) 88%, transparent); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; backdrop-filter: blur(12px); }
+  aside { display: flex; flex-direction: column; gap: 16px; align-self: start; position: sticky; top: 16px; }
+  @media (max-width: 900px) { aside { position: static; } }
+  .panel h2 { font-size: 16px; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+
+  .seg { display: flex; background: var(--panel-2); border-radius: 10px; padding: 3px; gap: 3px; margin-bottom: 14px; }
+  .seg button { flex: 1; border: 0; background: none; color: var(--muted); padding: 7px 6px; border-radius: 8px; cursor: pointer; font: inherit; font-size: 13px; }
+  .seg button[aria-pressed="true"] { background: var(--line); color: var(--text); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { border: 1px solid var(--line); background: var(--panel-2); color: var(--text); padding: 6px 11px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 13px; text-transform: capitalize; transition: .15s; }
+  .chip:hover { border-color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  label.range { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  label.range output { color: var(--text); font-variant-numeric: tabular-nums; }
+  input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: var(--accent); }
+  .hint { font-size: 12px; color: var(--muted); margin: 2px 0 10px; }
+
+  .colorrow { display: flex; gap: 10px; align-items: center; }
+  input[type=color] { width: 52px; height: 52px; border: 0; padding: 0; background: none; cursor: pointer; border-radius: 12px; }
+  input[type=color]::-webkit-color-swatch-wrapper { padding: 0; } input[type=color]::-webkit-color-swatch { border: 2px solid var(--line); border-radius: 12px; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 6px; }
+  .sw { width: 26px; height: 26px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; padding: 0; }
+  .sw:hover { border-color: #fff; }
+  .drop { border: 1.5px dashed var(--line); border-radius: 12px; padding: 16px; text-align: center; color: var(--muted); cursor: pointer; display: block; }
+  .drop:hover, .drop.over { border-color: var(--accent); color: var(--text); }
+  .drop img { max-width: 100%; max-height: 140px; border-radius: 8px; display: block; margin: 0 auto 8px; }
+  .drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  select { background: var(--panel-2); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font: inherit; font-size: 13px; }
+  .toggle { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; margin-top: 12px; }
+  .toggle input { accent-color: var(--accent); width: 18px; height: 18px; }
+
+  /* perfil */
+  .profile { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+  @media (max-width: 640px) { .profile { grid-template-columns: 1fr; } }
+  .axis { display: grid; grid-template-columns: 92px 1fr 40px; align-items: center; gap: 8px; font-size: 13px; margin: 7px 0; }
+  .axis .lbl { color: var(--muted); }
+  .bar { height: 8px; background: var(--panel-2); border-radius: 99px; overflow: hidden; position: relative; }
+  .bar i { position: absolute; inset: 0 auto 0 0; border-radius: 99px; background: linear-gradient(90deg, var(--accent-2), var(--accent)); transition: width .4s; }
+  .bar.center::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); opacity: .5; }
+  .bar.center i { inset: 0 auto; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; }
+  .palette { display: flex; gap: 4px; margin-top: 10px; }
+  .palette span { flex: 1; height: 22px; border-radius: 6px; }
+  .sources { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  /* resultados */
+  .results-head { display: flex; justify-content: space-between; align-items: baseline; margin: 4px 0 12px; gap: 12px; flex-wrap: wrap; }
+  .results-head small { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 12px; animation: pop .35s ease both; }
+  .card:nth-child(1) { border-color: color-mix(in srgb, var(--accent) 60%, var(--line)); }
+  @keyframes pop { from { opacity: 0; transform: translateY(8px); } }
+  .card-top { display: flex; gap: 12px; align-items: center; }
+  .ring { --v: 0; flex: none; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+          background: conic-gradient(var(--accent) calc(var(--v) * 1%), var(--panel-2) 0); }
+  .ring b { width: 46px; height: 46px; border-radius: 50%; background: var(--panel); display: grid; place-items: center; font: 700 16px "Space Grotesk"; }
+  .card h3 { font-size: 19px; line-height: 1.2; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); margin-right: 4px; }
+  .badge.joya { background: color-mix(in srgb, var(--good) 18%, transparent); border-color: var(--good); color: var(--good); }
+  .why { font-size: 13px; color: #c5cadb; margin: 0; }
+  .dims .axis { grid-template-columns: 128px 1fr; margin: 4px 0; font-size: 12px; }
+  .dims .want .lbl { color: var(--text); font-weight: 600; }
+  .dims .want .lbl::before { content: "● "; color: var(--accent); }
+  .terms { display: flex; flex-wrap: wrap; gap: 4px; }
+  .terms span { font-size: 11px; color: var(--muted); background: var(--panel-2); border-radius: 6px; padding: 2px 7px; }
+  .empty, .error { text-align: center; color: var(--muted); padding: 48px 16px; }
+  .error { color: #ff8a8a; }
+  details summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 8px 16px 32px; }
+  .loading { opacity: .55; transition: opacity .2s; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fusión <span>Sensorial</span></h1>
+  <p>Dinos qué escuchas y qué color te late. Te recomendamos destinos de México según más de 208 mil reseñas reales de Rest-Mex 2025.</p>
+</header>
+
+<main>
+  <aside>
+    <section class="panel" aria-labelledby="h-music">
+      <h2 id="h-music">Música</h2>
+      <div class="seg" role="group" aria-label="Modo de música" id="musicMode">
+        <button data-v="preset" aria-pressed="true">Género</button>
+        <button data-v="manual" aria-pressed="false">Manual</button>
+        <button data-v="none" aria-pressed="false">Sin música</button>
+      </div>
+      <div id="m-preset"><div class="chips" id="presets"></div></div>
+      <div id="m-manual" hidden>
+        <label class="range">Tempo (BPM) <output id="o-bpm"></output><input type="range" id="bpm" min="60" max="180" step="1" value="120"></label>
+        <label class="range">Energía <output id="o-energy"></output><input type="range" id="energy" min="0" max="1" step="0.05" value="0.7"></label>
+        <label class="range">Bailabilidad <output id="o-danceability"></output><input type="range" id="danceability" min="0" max="1" step="0.05" value="0.6"></label>
+        <label class="range">Alegría (valence) <output id="o-valence"></output><input type="range" id="valence" min="0" max="1" step="0.05" value="0.6"></label>
+      </div>
+      <p class="hint" id="m-none" hidden>Solo se usará el color.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="h-color">
+      <h2 id="h-color">Color</h2>
+      <div class="seg" role="group" aria-label="Modo de color" id="colorMode">
+        <button data-v="hex" aria-pressed="true">Color</button>
+        <button data-v="image" aria-pressed="false">Imagen</button>
+        <button data-v="none" aria-pressed="false">Sin color</button>
+      </div>
+      <div id="c-hex">
+        <div class="colorrow">
+          <input type="color" id="color" value="#ff6a3d" aria-label="Elegir color">
+          <div class="swatches" id="swatches"></div>
+        </div>
+      </div>
+      <div id="c-image" hidden>
+        <label class="drop" id="drop">
+          <input type="file" id="file" accept="image/*">
+          <span id="dropText">Arrastra una foto o haz clic para elegirla</span>
+        </label>
+      </div>
+      <p class="hint" id="c-none" hidden>Sin color, la calidez queda neutra.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="h-filters">
+      <h2 id="h-filters">Preferencias</h2>
+      <label class="range">Importancia del precio <output id="o-presupuesto"></output><input type="range" id="presupuesto" min="0" max="1" step="0.05" value="0"></label>
+      <p class="hint">0 = solo calidad · 1 = buscar el mejor valor por tu dinero</p>
+      <label class="range">Peso de la música vs color <output id="o-alpha"></output><input type="range" id="alpha" min="0" max="1" step="0.05" value="0.5"></label>
+      <div class="row">
+        <select id="tipo" aria-label="Tipo">
+          <option value="">Todo</option>
+          <option value="Hotel">Hoteles</option>
+          <option value="Restaurant">Restaurantes</option>
+          <option value="Attractive">Atractivos</option>
+        </select>
+        <select id="vista" aria-label="Vista">
+          <option value="unidades">Por lugar y tipo</option>
+          <option value="destinos">Por destino</option>
+        </select>
+      </div>
+      <label class="toggle"><input type="checkbox" id="joyas"> Solo joyas ocultas</label>
+    </section>
+  </aside>
+
+  <section aria-live="polite">
+    <div class="panel profile" id="profile"></div>
+    <div class="results-head">
+      <h2 id="resTitle">Tus destinos</h2>
+      <small id="resMeta"></small>
+    </div>
+    <div class="grid" id="results"></div>
+  </section>
+</main>
+<footer>Perfiles calculados con PySpark · Unidad de recomendación: (destino, tipo) · Los pesos sensoriales son heurísticos</footer>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pretty = (s) => String(s).replace(/_/g, " ").replace(/([a-z])([A-Z])/g, "$1 $2");
+const TYPE = { Hotel: "Hoteles", Restaurant: "Restaurantes", Attractive: "Atractivos" };
+const SWATCHES = ["#ff3300", "#ff8800", "#ffd23f", "#2ecc71", "#1f6966", "#6fa8dc", "#1a365d", "#7c5cff", "#e84393", "#f5f0e6"];
+
+const state = { music: "preset", preset: "reggaeton", colorMode: "hex", image: null };
+let meta, timer, ctrl;
+
+function seg(id, key, onChange) {
+  $(id).addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    [...$(id).children].forEach((x) => x.setAttribute("aria-pressed", x === b));
+    state[key] = b.dataset.v; onChange(); go();
+  });
+}
+
+function showModes() {
+  $("m-preset").hidden = state.music !== "preset";
+  $("m-manual").hidden = state.music !== "manual";
+  $("m-none").hidden = state.music !== "none";
+  $("c-hex").hidden = state.colorMode !== "hex";
+  $("c-image").hidden = state.colorMode !== "image";
+  $("c-none").hidden = state.colorMode !== "none";
+}
+
+function setAccent(hex) { document.documentElement.style.setProperty("--accent", hex); }
+
+function request() {
+  const r = {
+    presupuesto: +$("presupuesto").value, alpha: +$("alpha").value,
+    tipo: $("tipo").value, vista: $("vista").value, solo_joyas: $("joyas").checked, top: 9,
+  };
+  if (state.music === "preset") r.preset = state.preset;
+  if (state.music === "manual") r.music = Object.fromEntries(["bpm", "energy", "danceability", "valence"].map((k) => [k, +$(k).value]));
+  if (state.colorMode === "hex") r.color = $("color").value;
+  if (state.colorMode === "image" && state.image) r.image = state.image;
+  return r;
+}
+
+function go() { clearTimeout(timer); timer = setTimeout(run, 180); }
+
+async function run() {
+  document.querySelectorAll("output").forEach((o) => { const i = $(o.id.slice(2)); o.textContent = i.max > 1 ? i.value : (+i.value).toFixed(2); });
+  ctrl?.abort(); ctrl = new AbortController();
+  $("results").classList.add("loading");
+  try {
+    const res = await fetch("/api/recommend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(request()), signal: ctrl.signal });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    render(data);
+  } catch (e) {
+    if (e.name === "AbortError") return;
+    $("results").innerHTML = `<div class="error">${esc(e.message)}</div>`;
+    $("resMeta").textContent = "";
+  } finally { $("results").classList.remove("loading"); }
+}
+
+const axis = (label, v, extra = "") => `<div class="axis ${extra}"><span class="lbl">${label}</span><div class="bar"><i style="width:${(v * 100).toFixed(0)}%"></i></div><span class="num">${v.toFixed(2)}</span></div>`;
+// barra centrada para valores en [-1, 1]
+const centered = (label, v, extra = "") => {
+  const w = Math.abs(v) * 50, left = v >= 0 ? 50 : 50 - w;
+  return `<div class="axis ${extra}"><span class="lbl">${label}</span><div class="bar center"><i style="left:${left}%;width:${w}%"></i></div></div>`;
+};
+
+function render({ profile: p, tau, results }) {
+  if (p.palette.length) setAccent(p.palette[0]);
+  const maxTau = Math.max(...Object.values(tau).map(Math.abs), 1e-9);
+  $("profile").innerHTML = `
+    <div>
+      <h2>Tu perfil sensorial</h2>
+      ${axis("Activación", p.A)}${axis("Positividad", p.P)}${axis("Calidez", p.W)}
+      ${p.palette.length ? `<div class="palette">${p.palette.map((c) => `<span style="background:${esc(c)}" title="${esc(c)}"></span>`).join("")}</div>` : ""}
+      <div class="sources">Fuente: ${esc(p.sources.join(" + "))}</div>
+    </div>
+    <div>
+      <h2>Lo que buscas</h2>
+      <div class="dims">${meta.dims.map((d) => centered(meta.labels[d], tau[d] / maxTau, tau[d] > 0 ? "want" : "")).join("")}</div>
+    </div>`;
+
+  const vista = $("vista").value;
+  $("resMeta").textContent = `${results.length} resultados · ${meta.n_units} unidades analizadas`;
+  if (!results.length) { $("results").innerHTML = `<div class="empty">No hay resultados con esos filtros. Prueba quitando “solo joyas ocultas”.</div>`; return; }
+  $("results").innerHTML = results.map((r, i) => `
+    <article class="card">
+      <div class="card-top">
+        <div class="ring" style="--v:${r.score.toFixed(0)}" aria-label="Compatibilidad ${r.score.toFixed(0)} de 100"><b>${r.score.toFixed(0)}</b></div>
+        <div>
+          <h3>${i + 1}. ${esc(pretty(r.town))}</h3>
+          <div class="meta">${esc(pretty(r.region))}</div>
+        </div>
+      </div>
+      <div>
+        ${vista === "destinos" ? r.types.split(", ").map((t) => `<span class="badge">${esc(t)}</span>`).join("") : `<span class="badge">${TYPE[r.type] || esc(r.type)}</span>`}
+        ${r.joya ? `<span class="badge joya">Joya oculta</span>` : ""}
+        <span class="badge">${r.pol_mean.toFixed(2)}/5 · ${r.n.toLocaleString("es-MX")} reseñas</span>
+      </div>
+      <div class="dims">${meta.dims.map((d) => centered(meta.labels[d], r.t[d], tau[d] > 0 ? "want" : "")).join("")}</div>
+      ${r.top_terms.length ? `<div class="terms">${r.top_terms.slice(0, 6).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
+      <details><summary>¿Por qué?</summary><p class="why">${esc(r.why)}</p></details>
+    </article>`).join("");
+}
+
+function loadImage(file) {
+  if (!file || !file.type.startsWith("image/")) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    state.image = reader.result;
+    $("dropText").innerHTML = `<img src="${reader.result}" alt="Imagen elegida">Cambiar imagen`;
+    go();
+  };
+  reader.readAsDataURL(file);
+}
+
+async function init() {
+  meta = await (await fetch("/api/meta")).json();
+  $("presets").innerHTML = Object.keys(meta.presets).map((k) => `<button class="chip" data-p="${esc(k)}" aria-pressed="${k === state.preset}">${esc(k)}</button>`).join("");
+  $("presets").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    state.preset = b.dataset.p;
+    $("presets").querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === b));
+    Object.entries(meta.presets[state.preset]).forEach(([k, v]) => { $(k).value = v; }); // para que "Manual" parta del género
+    go();
+  });
+  $("swatches").innerHTML = SWATCHES.map((c) => `<button class="sw" style="background:${c}" data-c="${c}" aria-label="Color ${c}"></button>`).join("");
+  $("swatches").addEventListener("click", (e) => { const b = e.target.closest(".sw"); if (!b) return; $("color").value = b.dataset.c; setAccent(b.dataset.c); go(); });
+  $("color").addEventListener("input", () => { setAccent($("color").value); go(); });
+  ["bpm", "energy", "danceability", "valence", "presupuesto", "alpha", "tipo", "vista", "joyas"].forEach((id) => $(id).addEventListener("input", go));
+  $("file").addEventListener("change", (e) => loadImage(e.target.files[0]));
+  const drop = $("drop");
+  drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); loadImage(e.dataTransfer.files[0]); });
+  seg("musicMode", "music", showModes);
+  seg("colorMode", "colorMode", showModes);
+  setAccent($("color").value);
+  run();
+}
+init().catch((e) => { $("results").innerHTML = `<div class="error">No se pudo conectar con el servidor: ${esc(e.message)}</div>`; });
+</script>
+</body>
+</html>

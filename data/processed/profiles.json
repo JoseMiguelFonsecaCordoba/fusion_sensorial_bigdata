@@ -15,13 +15,13 @@
    "rate_barato": 0.0145,
    "rate_caro": 0.0062,
    "t": {
-    "vida_nocturna": 0.7297,
-    "aventura": -0.1892,
-    "naturaleza": 0.7297,
-    "descanso": 0.8919,
-    "cultura": -0.7838,
-    "gastronomia": 0.1351,
-    "playa": 0.4054
+    "vida_nocturna": 0.435,
+    "aventura": 0.1437,
+    "naturaleza": 0.8088,
+    "descanso": 0.7871,
+    "cultura": -0.3966,
+    "gastronomia": -0.2362,
+    "playa": 0.4877
    },
    "top_terms": [
     "chapala",
@@ -48,13 +48,13 @@
    "rate_barato": 0.0776,
    "rate_caro": 0.056,
    "t": {
-    "vida_nocturna": 0.1724,
-    "aventura": -0.1034,
-    "naturaleza": 0.7931,
-    "descanso": 0.5172,
-    "cultura": -0.4483,
-    "gastronomia": -0.3793,
-    "playa": 0.4483
+    "vida_nocturna": 0.2778,
+    "aventura": 0.0277,
+    "naturaleza": 0.7564,
+    "descanso": 0.6839,
+    "cultura": -0.4625,
+    "gastronomia": -0.2597,
+    "playa": 0.4251
    },
    "top_terms": [
     "chapala",
@@ -81,13 +81,13 @@
    "rate_barato": 0.119,
    "rate_caro": 0.035,
    "t": {
-    "vida_nocturna": 0.4872,
-    "aventura": -0.0769,
-    "naturaleza": 0.9487,
-    "descanso": 0.6923,
-    "cultura": -0.1795,
-    "gastronomia": 0.1282,
-    "playa": 0.5385
+    "vida_nocturna": 0.566,
+    "aventura": -0.3609,
+    "naturaleza": 0.6846,
+    "descanso": 0.2387,
+    "cultura": -0.3654,
+    "gastronomia": 0.3959,
+    "playa": 0.4047
    },
    "top_terms": [
     "chapala",
@@ -114,13 +114,13 @@
    "rate_barato": 0.0859,
    "rate_caro": 0.0152,
    "t": {
-    "vida_nocturna": 0.5676,
-    "aventura": -0.4054,
-    "naturaleza": -0.7838,
-    "descanso": 0.4595,
-    "cultura": 0.027,
-    "gastronomia": 0.9459,
-    "playa": 0.027
+    "vida_nocturna": 0.2978,
+    "aventura": -0.0392,
+    "naturaleza": -0.49,
+    "descanso": 0.3559,
+    "cultura": 0.3359,
+    "gastronomia": 0.3188,
+    "playa": 0.1584
    },
    "top_terms": [
     "valencia",
@@ -147,13 +147,13 @@
    "rate_barato": 0.0537,
    "rate_caro": 0.0331,
    "t": {
-    "vida_nocturna": -0.7436,
-    "aventura": -0.1795,
-    "naturaleza": 0.3333,
-    "descanso": 0.7949,
-    "cultura": -0.6923,
-    "gastronomia": 0.4872,
-    "playa": -0.2821
+    "vida_nocturna": -0.4886,
+    "aventura": -0.4309,
+    "naturaleza": -0.053,
+    "descanso": 0.3087,
+    "cultura": -0.7807,
+    "gastronomia": 0.6408,
+    "playa": -0.3793
    },
    "top_terms": [
     "valencia",
@@ -180,13 +180,13 @@
    "rate_barato": 0.0944,
    "rate_caro": 0.0328,
    "t": {
-    "vida_nocturna": 0.027,
-    "aventura": 0.6757,
+    "vida_nocturna": -0.2622,
+    "aventura": 0.7818,
     "naturaleza": 1.0,
-    "descanso": 0.5135,
-    "cultura": -0.2432,
-    "gastronomia": 0.0811,
-    "playa": 0.5676
+    "descanso": 0.4577,
+    "cultura": 0.098,
+    "gastronomia": -0.2725,
+    "playa": 0.6436
    },
    "top_terms": [
     "laguna",
@@ -213,13 +213,13 @@
    "rate_barato": 0.1058,
    "rate_caro": 0.0713,
    "t": {
-    "vida_nocturna": -0.5172,
-    "aventura": 0.931,
-    "naturaleza": 1.0,
-    "descanso": 0.5862,
-    "cultura": -0.5862,
-    "gastronomia": 0.2414,
-    "playa": 0.6552
+    "vida_nocturna": -0.3661,
+    "aventura": 0.8066,
+    "naturaleza": 0.9626,
+    "descanso": 0.7277,
+    "cultura": -0.5782,
+    "gastronomia": 0.1347,
+    "playa": 0.622
    },
    "top_terms": [
     "laguna",
@@ -246,13 +246,13 @@
    "rate_barato": 0.1194,
    "rate_caro": 0.0421,
    "t": {
-    "vida_nocturna": 0.2308,
-    "aventura": 1.0,
-    "naturaleza": 1.0,
-    "descanso": 0.641,
-    "cultura": -0.641,
-    "gastronomia": -0.0256,
-    "playa": 0.641
+    "vida_nocturna": 0.3537,
+    "aventura": 0.5327,
+    "naturaleza": 0.7664,
+    "descanso": 0.1943,
+    "cultura": -0.7364,
+    "gastronomia": 0.2722,
+    "playa": 0.5495
    },
    "top_terms": [
     "laguna",
@@ -279,12 +279,12 @@
    "rate_barato": 0.1021,
    "rate_caro": 0.1197,
    "t": {
-    "vida_nocturna": -0.6552,
-    "aventura": -0.4483,
-    "naturaleza": -0.8621,
-    "descanso": -0.7931,
-    "cultura": 0.2414,
-    "gastronomia": -0.1034,
+    "vida_nocturna": -0.5846,
+    "aventura": -0.3036,
+    "naturaleza": -0.5946,
+    "descanso": -0.233,
+    "cultura": 0.1067,
+    "gastronomia": -0.0844,
     "playa": -1.0
    },
    "top_terms": [
@@ -312,12 +312,12 @@
    "rate_barato": 0.1277,
    "rate_caro": 0.03,
    "t": {
-    "vida_nocturna": 0.4359,
-    "aventura": 0.3846,
-    "naturaleza": -0.641,
-    "descanso": -0.2821,
-    "cultura": -0.4872,
-    "gastronomia": -0.3846,
+    "vida_nocturna": 0.531,
+    "aventura": -0.0273,
+    "naturaleza": -0.7551,
+    "descanso": -0.4728,
+    "cultura": -0.5847,
+    "gastronomia": 0.0273,
     "playa": -1.0
    },
    "top_terms": [
@@ -345,13 +345,13 @@
    "rate_barato": 0.0787,
    "rate_caro": 0.0346,
    "t": {
-    "vida_nocturna": 0.1892,
-    "aventura": -0.5676,
-    "naturaleza": 0.9459,
-    "descanso": -0.6216,
-    "cultura": -0.8378,
-    "gastronomia": -0.8378,
-    "playa": 0.7297
+    "vida_nocturna": -0.125,
+    "aventura": -0.2137,
+    "naturaleza": 0.9636,
+    "descanso": -0.4744,
+    "cultura": -0.4703,
+    "gastronomia": -0.8909,
+    "playa": 0.7714
    },
    "top_terms": [
     "sumidero",
@@ -378,13 +378,13 @@
    "rate_barato": 0.1572,
    "rate_caro": 0.0917,
    "t": {
-    "vida_nocturna": 0.0256,
+    "vida_nocturna": 0.1483,
     "aventura": -1.0,
-    "naturaleza": 0.3846,
-    "descanso": 0.8974,
-    "cultura": -0.0769,
-    "gastronomia": 0.3846,
-    "playa": 0.4872
+    "naturaleza": -0.018,
+    "descanso": 0.3786,
+    "cultura": -0.2861,
+    "gastronomia": 0.5708,
+    "playa": 0.3604
    },
    "top_terms": [
     "sumidero",
@@ -411,13 +411,13 @@
    "rate_barato": 0.0639,
    "rate_caro": 0.0283,
    "t": {
-    "vida_nocturna": -0.3514,
-    "aventura": -0.6757,
-    "naturaleza": -0.7297,
-    "descanso": -0.8378,
-    "cultura": 0.9459,
-    "gastronomia": -0.5676,
-    "playa": -0.5135
+    "vida_nocturna": -0.5261,
+    "aventura": -0.3238,
+    "naturaleza": -0.4536,
+    "descanso": -0.8161,
+    "cultura": 0.9636,
+    "gastronomia": -0.709,
+    "playa": -0.3175
    },
    "top_terms": [
     "piramide",
@@ -444,13 +444,13 @@
    "rate_barato": 0.1311,
    "rate_caro": 0.0543,
    "t": {
-    "vida_nocturna": 0.5897,
-    "aventura": 0.3333,
-    "naturaleza": 0.4359,
-    "descanso": -0.5897,
-    "cultura": 0.4872,
-    "gastronomia": -0.1282,
-    "playa": -0.0256
+    "vida_nocturna": 0.6547,
+    "aventura": -0.0623,
+    "naturaleza": 0.0264,
+    "descanso": -0.6827,
+    "cultura": 0.2202,
+    "gastronomia": 0.2023,
+    "playa": -0.167
    },
    "top_terms": [
     "piramide",
@@ -477,13 +477,13 @@
    "rate_barato": 0.0932,
    "rate_caro": 0.0127,
    "t": {
-    "vida_nocturna": -0.4054,
-    "aventura": -0.6216,
-    "naturaleza": -0.4054,
-    "descanso": 0.3514,
-    "cultura": 0.2432,
+    "vida_nocturna": -0.5625,
+    "aventura": -0.2594,
+    "naturaleza": -0.1606,
+    "descanso": 0.2832,
+    "cultura": 0.4908,
     "gastronomia": 1.0,
-    "playa": -0.4054
+    "playa": -0.2448
    },
    "top_terms": [
     "xalapa",
@@ -510,13 +510,13 @@
    "rate_barato": 0.1347,
    "rate_caro": 0.0155,
    "t": {
-    "vida_nocturna": -1.0,
-    "aventura": -0.931,
-    "naturaleza": -0.4483,
-    "descanso": 0.2414,
-    "cultura": 0.4483,
-    "gastronomia": 1.0,
-    "playa": 0.0345
+    "vida_nocturna": -0.9533,
+    "aventura": -0.7225,
+    "naturaleza": -0.2382,
+    "descanso": 0.5085,
+    "cultura": 0.4064,
+    "gastronomia": 0.8131,
+    "playa": 0.0219
    },
    "top_terms": [
     "xalapa",
@@ -543,13 +543,13 @@
    "rate_barato": 0.1594,
    "rate_caro": 0.0463,
    "t": {
-    "vida_nocturna": -0.1795,
-    "aventura": -0.2308,
-    "naturaleza": 0.5897,
-    "descanso": -0.641,
-    "cultura": 0.2308,
-    "gastronomia": 0.8462,
-    "playa": 0.6923
+    "vida_nocturna": -0.029,
+    "aventura": -0.4659,
+    "naturaleza": 0.15,
+    "descanso": -0.7271,
+    "cultura": -0.0295,
+    "gastronomia": 0.8857,
+    "playa": 0.6032
    },
    "top_terms": [
     "xalapa",
@@ -576,13 +576,13 @@
    "rate_barato": 0.0485,
    "rate_caro": 0.0194,
    "t": {
-    "vida_nocturna": -0.5676,
-    "aventura": 0.0811,
-    "naturaleza": 0.6757,
-    "descanso": 0.8378,
-    "cultura": -0.1892,
+    "vida_nocturna": -0.6903,
+    "aventura": 0.3536,
+    "naturaleza": 0.7724,
+    "descanso": 0.7133,
+    "cultura": 0.1811,
     "gastronomia": -1.0,
-    "playa": 0.2973
+    "playa": 0.415
    },
    "top_terms": [
     "tarahumara",
@@ -609,12 +609,12 @@
    "rate_barato": 0.1362,
    "rate_caro": 0.0463,
    "t": {
-    "vida_nocturna": 0.7931,
-    "aventura": 0.4483,
-    "naturaleza": 0.1034,
-    "descanso": -0.8621,
-    "cultura": -0.5172,
-    "gastronomia": 0.5172,
+    "vida_nocturna": 0.8405,
+    "aventura": 0.4157,
+    "naturaleza": 0.1872,
+    "descanso": -0.2768,
+    "cultura": -0.5156,
+    "gastronomia": 0.3194,
     "playa": -1.0
    },
    "top_terms": [
@@ -642,12 +642,12 @@
    "rate_barato": 0.2785,
    "rate_caro": 0.0537,
    "t": {
-    "vida_nocturna": -0.5385,
-    "aventura": 0.4359,
+    "vida_nocturna": -0.3206,
+    "aventura": 0.017,
     "naturaleza": -1.0,
-    "descanso": -0.8462,
-    "cultura": -0.8462,
-    "gastronomia": -0.3333,
+    "descanso": -0.8763,
+    "cultura": -0.8857,
+    "gastronomia": 0.0623,
     "playa": -1.0
    },
    "top_terms": [
@@ -675,13 +675,13 @@
    "rate_barato": 0.0393,
    "rate_caro": 0.0517,
    "t": {
-    "vida_nocturna": -0.7838,
-    "aventura": 0.1351,
-    "naturaleza": 0.2973,
-    "descanso": -0.1351,
-    "cultura": -0.4595,
-    "gastronomia": -0.7297,
-    "playa": 0.5135
+    "vida_nocturna": -0.8545,
+    "aventura": 0.39,
+    "naturaleza": 0.4711,
+    "descanso": -0.0535,
+    "cultura": -0.0755,
+    "gastronomia": -0.8181,
+    "playa": 0.5792
    },
    "top_terms": [
     "dunas",
@@ -708,12 +708,12 @@
    "rate_barato": 0.1786,
    "rate_caro": 0.0848,
    "t": {
-    "vida_nocturna": 0.7436,
+    "vida_nocturna": 0.7783,
     "aventura": -1.0,
-    "naturaleza": -0.5385,
+    "naturaleza": -0.6851,
     "descanso": -1.0,
-    "cultura": 0.6923,
-    "gastronomia": -0.9487,
+    "cultura": 0.4069,
+    "gastronomia": -0.3949,
     "playa": -1.0
    },
    "top_terms": [
@@ -741,12 +741,12 @@
    "rate_barato": 0.1242,
    "rate_caro": 0.0101,
    "t": {
-    "vida_nocturna": -0.8919,
-    "aventura": -0.0811,
-    "naturaleza": 0.4054,
-    "descanso": -0.6757,
-    "cultura": 0.6216,
-    "gastronomia": 0.1892,
+    "vida_nocturna": -0.9273,
+    "aventura": 0.2445,
+    "naturaleza": 0.5812,
+    "descanso": -0.5294,
+    "cultura": 0.7454,
+    "gastronomia": -0.1998,
     "playa": -1.0
    },
    "top_terms": [
@@ -774,13 +774,13 @@
    "rate_barato": 0.1514,
    "rate_caro": 0.0239,
    "t": {
-    "vida_nocturna": -0.7931,
-    "aventura": 0.8621,
-    "naturaleza": 0.931,
-    "descanso": 0.8621,
-    "cultura": 0.1034,
-    "gastronomia": -0.1724,
-    "playa": -0.2414
+    "vida_nocturna": -0.7657,
+    "aventura": 0.7628,
+    "naturaleza": 0.8534,
+    "descanso": 0.903,
+    "cultura": -0.009,
+    "gastronomia": -0.1283,
+    "playa": -0.2001
    },
    "top_terms": [
     "arqueologica",
@@ -807,13 +807,13 @@
    "rate_barato": 0.1812,
    "rate_caro": 0.0224,
    "t": {
-    "vida_nocturna": 0.2821,
+    "vida_nocturna": 0.3887,
     "aventura": -1.0,
-    "naturaleza": -0.6923,
-    "descanso": 0.0769,
-    "cultura": 0.5897,
-    "gastronomia": -0.2308,
-    "playa": -0.1282
+    "naturaleza": -0.7901,
+    "descanso": -0.2092,
+    "cultura": 0.3089,
+    "gastronomia": 0.1323,
+    "playa": -0.237
    },
    "top_terms": [
     "arqueologica",
@@ -840,13 +840,13 @@
    "rate_barato": 0.0409,
    "rate_caro": 0.0307,
    "t": {
-    "vida_nocturna": -0.0811,
-    "aventura": -0.8378,
-    "naturaleza": -0.5676,
-    "descanso": -0.8919,
-    "cultura": 0.5135,
-    "gastronomia": 0.8919,
-    "playa": -0.0811
+    "vida_nocturna": -0.3349,
+    "aventura": -0.4329,
+    "naturaleza": -0.3352,
+    "descanso": -0.8805,
+    "cultura": 0.6726,
+    "gastronomia": 0.2824,
+    "playa": 0.0669
    },
    "top_terms": [
     "vinedo",
@@ -873,13 +873,13 @@
    "rate_barato": 0.1221,
    "rate_caro": 0.0343,
    "t": {
-    "vida_nocturna": -0.6923,
-    "aventura": -0.3333,
-    "naturaleza": 0.0769,
-    "descanso": 0.8462,
-    "cultura": 0.4359,
-    "gastronomia": 0.1795,
-    "playa": 0.4359
+    "vida_nocturna": -0.4256,
+    "aventura": -0.5358,
+    "naturaleza": -0.2279,
+    "descanso": 0.3436,
+    "cultura": 0.1852,
+    "gastronomia": 0.4309,
+    "playa": 0.2974
    },
    "top_terms": [
     "vinedo",
@@ -906,13 +906,13 @@
    "rate_barato": 0.1129,
    "rate_caro": 0.0597,
    "t": {
-    "vida_nocturna": -0.2973,
-    "aventura": 0.7297,
-    "naturaleza": 0.4595,
-    "descanso": 0.1892,
-    "cultura": -0.4054,
-    "gastronomia": 0.5676,
-    "playa": 0.3514
+    "vida_nocturna": -0.4898,
+    "aventura": 0.8181,
+    "naturaleza": 0.6269,
+    "descanso": 0.174,
+    "cultura": -0.0392,
+    "gastronomia": 0.0548,
+    "playa": 0.4514
    },
    "top_terms": [
     "prismas",
@@ -939,13 +939,13 @@
    "rate_barato": 0.0951,
    "rate_caro": 0.1065,
    "t": {
-    "vida_nocturna": -0.3103,
-    "aventura": 0.2414,
-    "naturaleza": 0.5862,
-    "descanso": -0.1034,
-    "cultura": 0.8621,
-    "gastronomia": -1.0,
-    "playa": 0.3103
+    "vida_nocturna": -0.1972,
+    "aventura": 0.2562,
+    "naturaleza": 0.6062,
+    "descanso": 0.2707,
+    "cultura": 0.6974,
+    "gastronomia": -0.6729,
+    "playa": 0.3281
    },
    "top_terms": [
     "prismas",
@@ -972,12 +972,12 @@
    "rate_barato": 0.1322,
    "rate_caro": 0.0747,
    "t": {
-    "vida_nocturna": -0.0769,
+    "vida_nocturna": 0.069,
     "aventura": -1.0,
-    "naturaleza": 0.1282,
-    "descanso": -0.8974,
-    "cultura": -0.4359,
-    "gastronomia": 0.7436,
+    "naturaleza": -0.1929,
+    "descanso": -0.9113,
+    "cultura": -0.5497,
+    "gastronomia": 0.8157,
     "playa": -1.0
    },
    "top_terms": [
@@ -1005,13 +1005,13 @@
    "rate_barato": 0.0722,
    "rate_caro": 0.0327,
    "t": {
-    "vida_nocturna": 1.0,
-    "aventura": 0.1892,
-    "naturaleza": -0.6216,
-    "descanso": 0.7297,
-    "cultura": -0.6216,
-    "gastronomia": -0.027,
-    "playa": 0.9459
+    "vida_nocturna": 0.9346,
+    "aventura": 0.4544,
+    "naturaleza": -0.3716,
+    "descanso": 0.6312,
+    "cultura": -0.2594,
+    "gastronomia": -0.3453,
+    "playa": 0.9636
    },
    "top_terms": [
     "playa",
@@ -1038,13 +1038,13 @@
    "rate_barato": 0.1177,
    "rate_caro": 0.0399,
    "t": {
-    "vida_nocturna": 1.0,
-    "aventura": 0.7931,
-    "naturaleza": -0.7241,
-    "descanso": -0.1724,
-    "cultura": -0.8621,
-    "gastronomia": -0.0345,
-    "playa": 1.0
+    "vida_nocturna": 0.9907,
+    "aventura": 0.6629,
+    "naturaleza": -0.4882,
+    "descanso": 0.2269,
+    "cultura": -0.8282,
+    "gastronomia": -0.0406,
+    "playa": 0.9813
    },
    "top_terms": [
     "playa",
@@ -1071,13 +1071,13 @@
    "rate_barato": 0.104,
    "rate_caro": 0.033,
    "t": {
-    "vida_nocturna": 0.5385,
-    "aventura": 0.6923,
-    "naturaleza": 0.2821,
-    "descanso": -0.2308,
-    "cultura": -0.7436,
-    "gastronomia": 1.0,
-    "playa": 1.0
+    "vida_nocturna": 0.601,
+    "aventura": 0.248,
+    "naturaleza": -0.0879,
+    "descanso": -0.4378,
+    "cultura": -0.8157,
+    "gastronomia": 0.9907,
+    "playa": 0.9346
    },
    "top_terms": [
     "playa",
@@ -1104,13 +1104,13 @@
    "rate_barato": 0.1108,
    "rate_caro": 0.0795,
    "t": {
-    "vida_nocturna": 0.7838,
-    "aventura": -0.4054,
-    "naturaleza": -0.0811,
-    "descanso": 0.6757,
-    "cultura": -0.5676,
-    "gastronomia": 0.6757,
-    "playa": 0.4595
+    "vida_nocturna": 0.4807,
+    "aventura": -0.0392,
+    "naturaleza": 0.151,
+    "descanso": 0.5855,
+    "cultura": -0.2137,
+    "gastronomia": 0.1276,
+    "playa": 0.5335
    },
    "top_terms": [
     "marriot",
@@ -1137,13 +1137,13 @@
    "rate_barato": 0.1165,
    "rate_caro": 0.1418,
    "t": {
-    "vida_nocturna": 0.3793,
-    "aventura": -0.2414,
-    "naturaleza": -0.5172,
-    "descanso": 0.7241,
-    "cultura": -0.6552,
-    "gastronomia": -0.8621,
-    "playa": 0.1724
+    "vida_nocturna": 0.456,
+    "aventura": -0.0786,
+    "naturaleza": -0.282,
+    "descanso": 0.8153,
+    "cultura": -0.6781,
+    "gastronomia": -0.5665,
+    "playa": 0.147
    },
    "top_terms": [
     "marriot",
@@ -1170,13 +1170,13 @@
    "rate_barato": 0.2563,
    "rate_caro": 0.0325,
    "t": {
-    "vida_nocturna": -0.8974,
+    "vida_nocturna": -0.6123,
     "aventura": -1.0,
-    "naturaleza": 0.1795,
-    "descanso": 0.1795,
-    "cultura": -0.8974,
-    "gastronomia": 0.2308,
-    "playa": 0.5897
+    "naturaleza": -0.1579,
+    "descanso": -0.1392,
+    "cultura": -0.93,
+    "gastronomia": 0.4659,
+    "playa": 0.4584
    },
    "top_terms": [
     "marriot",
@@ -1203,12 +1203,12 @@
    "rate_barato": 0.0931,
    "rate_caro": 0.0183,
    "t": {
-    "vida_nocturna": -0.8378,
-    "aventura": -0.7838,
-    "naturaleza": -0.9459,
-    "descanso": 0.0811,
+    "vida_nocturna": -0.8909,
+    "aventura": -0.3966,
+    "naturaleza": -0.758,
+    "descanso": 0.1013,
     "cultura": 1.0,
-    "gastronomia": -0.3514,
+    "gastronomia": -0.5635,
     "playa": -1.0
    },
    "top_terms": [
@@ -1236,13 +1236,13 @@
    "rate_barato": 0.1682,
    "rate_caro": 0.0213,
    "t": {
-    "vida_nocturna": 0.3103,
-    "aventura": 0.6552,
-    "naturaleza": 0.5172,
-    "descanso": 0.6552,
-    "cultura": 0.7931,
-    "gastronomia": 0.7931,
-    "playa": 0.5172
+    "vida_nocturna": 0.3655,
+    "aventura": 0.5752,
+    "naturaleza": 0.553,
+    "descanso": 0.7715,
+    "cultura": 0.6536,
+    "gastronomia": 0.5227,
+    "playa": 0.4689
    },
    "top_terms": [
     "yucateca",
@@ -1269,13 +1269,13 @@
    "rate_barato": 0.1209,
    "rate_caro": 0.0396,
    "t": {
-    "vida_nocturna": -0.641,
-    "aventura": 0.1795,
-    "naturaleza": -0.3333,
-    "descanso": -0.1282,
-    "cultura": 0.7949,
-    "gastronomia": 0.6923,
-    "playa": -0.4359
+    "vida_nocturna": -0.3906,
+    "aventura": -0.186,
+    "naturaleza": -0.5452,
+    "descanso": -0.3585,
+    "cultura": 0.4956,
+    "gastronomia": 0.7807,
+    "playa": -0.4936
    },
    "top_terms": [
     "yucateca",
@@ -1302,13 +1302,13 @@
    "rate_barato": 0.0336,
    "rate_caro": 0.0148,
    "t": {
-    "vida_nocturna": 0.0811,
-    "aventura": 0.7838,
-    "naturaleza": 0.1351,
-    "descanso": 0.7838,
-    "cultura": -0.3514,
-    "gastronomia": -0.2432,
-    "playa": 0.6757
+    "vida_nocturna": -0.2258,
+    "aventura": 0.8545,
+    "naturaleza": 0.3246,
+    "descanso": 0.6676,
+    "cultura": -0.0028,
+    "gastronomia": -0.4908,
+    "playa": 0.7257
    },
    "top_terms": [
     "malecon",
@@ -1335,13 +1335,13 @@
    "rate_barato": 0.104,
    "rate_caro": 0.0452,
    "t": {
-    "vida_nocturna": 0.8621,
-    "aventura": 1.0,
-    "naturaleza": 0.0345,
-    "descanso": 0.3793,
-    "cultura": -0.3103,
-    "gastronomia": 0.1034,
-    "playa": 0.7241
+    "vida_nocturna": 0.8843,
+    "aventura": 0.8505,
+    "naturaleza": 0.1434,
+    "descanso": 0.5962,
+    "cultura": -0.3561,
+    "gastronomia": 0.0471,
+    "playa": 0.7593
    },
    "top_terms": [
     "malecon",
@@ -1368,13 +1368,13 @@
    "rate_barato": 0.1005,
    "rate_caro": 0.0386,
    "t": {
-    "vida_nocturna": 0.7949,
-    "aventura": 0.7949,
-    "naturaleza": -0.2308,
-    "descanso": 0.2821,
-    "cultura": 0.2821,
-    "gastronomia": 0.5385,
-    "playa": 0.7949
+    "vida_nocturna": 0.8133,
+    "aventura": 0.3273,
+    "naturaleza": -0.4659,
+    "descanso": -0.0693,
+    "cultura": 0.0149,
+    "gastronomia": 0.6758,
+    "playa": 0.7292
    },
    "top_terms": [
     "malecon",
@@ -1401,13 +1401,13 @@
    "rate_barato": 0.0821,
    "rate_caro": 0.0051,
    "t": {
-    "vida_nocturna": 0.2973,
-    "aventura": -0.2973,
-    "naturaleza": 0.1892,
-    "descanso": 0.2973,
-    "cultura": 0.7838,
-    "gastronomia": -0.4595,
-    "playa": 0.0811
+    "vida_nocturna": -0.0523,
+    "aventura": 0.071,
+    "naturaleza": 0.3703,
+    "descanso": 0.2468,
+    "cultura": 0.8545,
+    "gastronomia": -0.6363,
+    "playa": 0.1947
    },
    "top_terms": [
     "chalma",
@@ -1434,12 +1434,12 @@
    "rate_barato": 0.086,
    "rate_caro": 0.0452,
    "t": {
-    "vida_nocturna": 0.3333,
-    "aventura": -0.5385,
-    "naturaleza": 0.2308,
-    "descanso": -0.0256,
-    "cultura": -0.0256,
-    "gastronomia": -0.6923,
+    "vida_nocturna": 0.4237,
+    "aventura": -0.6758,
+    "naturaleza": -0.1229,
+    "descanso": -0.2792,
+    "cultura": -0.2324,
+    "gastronomia": -0.1826,
     "playa": -1.0
    },
    "top_terms": [
@@ -1467,13 +1467,13 @@
    "rate_barato": 0.0621,
    "rate_caro": 0.0047,
    "t": {
-    "vida_nocturna": -0.1351,
-    "aventura": 0.4054,
-    "naturaleza": 0.3514,
-    "descanso": -0.027,
-    "cultura": -0.9459,
-    "gastronomia": -0.9459,
-    "playa": 0.7838
+    "vida_nocturna": -0.3713,
+    "aventura": 0.5999,
+    "naturaleza": 0.5261,
+    "descanso": 0.0192,
+    "cultura": -0.6085,
+    "gastronomia": -0.9636,
+    "playa": 0.8171
    },
    "top_terms": [
     "cometa",
@@ -1500,13 +1500,13 @@
    "rate_barato": 0.052,
    "rate_caro": 0.0335,
    "t": {
-    "vida_nocturna": 0.2414,
-    "aventura": 0.5862,
-    "naturaleza": 0.3793,
-    "descanso": 0.7931,
-    "cultura": -0.7241,
-    "gastronomia": 0.3103,
-    "playa": 0.8621
+    "vida_nocturna": 0.3216,
+    "aventura": 0.5034,
+    "naturaleza": 0.4186,
+    "descanso": 0.8592,
+    "cultura": -0.7219,
+    "gastronomia": 0.1785,
+    "playa": 0.8843
    },
    "top_terms": [
     "cometa",
@@ -1533,13 +1533,13 @@
    "rate_barato": 0.1772,
    "rate_caro": 0.047,
    "t": {
-    "vida_nocturna": 0.9487,
-    "aventura": 0.2821,
-    "naturaleza": -0.3846,
-    "descanso": 0.2308,
-    "cultura": -0.9487,
-    "gastronomia": -0.0769,
-    "playa": 0.8974
+    "vida_nocturna": 0.9463,
+    "aventura": -0.0973,
+    "naturaleza": -0.5802,
+    "descanso": -0.1042,
+    "cultura": -0.965,
+    "gastronomia": 0.2372,
+    "playa": 0.7992
    },
    "top_terms": [
     "cometa",
@@ -1566,12 +1566,12 @@
    "rate_barato": 0.0936,
    "rate_caro": 0.0526,
    "t": {
-    "vida_nocturna": -0.1034,
-    "aventura": -0.3793,
-    "naturaleza": -0.931,
-    "descanso": -0.931,
-    "cultura": -0.1034,
-    "gastronomia": 0.6552,
+    "vida_nocturna": 0.0651,
+    "aventura": -0.213,
+    "naturaleza": -0.7599,
+    "descanso": -0.3207,
+    "cultura": -0.1592,
+    "gastronomia": 0.4164,
     "playa": -1.0
    },
    "top_terms": [
@@ -1599,13 +1599,13 @@
    "rate_barato": 0.0601,
    "rate_caro": 0.0376,
    "t": {
-    "vida_nocturna": -0.4872,
-    "aventura": -0.641,
-    "naturaleza": -0.9487,
-    "descanso": -0.7949,
+    "vida_nocturna": -0.2763,
+    "aventura": -0.7457,
+    "naturaleza": -0.965,
+    "descanso": -0.8414,
     "cultura": -1.0,
-    "gastronomia": -0.7949,
-    "playa": -0.1795
+    "gastronomia": -0.2619,
+    "playa": -0.2813
    },
    "top_terms": [
     "lusso",
@@ -1632,13 +1632,13 @@
    "rate_barato": 0.0996,
    "rate_caro": 0.0106,
    "t": {
-    "vida_nocturna": 0.6216,
-    "aventura": 0.027,
-    "naturaleza": 0.027,
-    "descanso": -0.5135,
-    "cultura": 0.0811,
-    "gastronomia": 0.7838,
-    "playa": -0.2432
+    "vida_nocturna": 0.3342,
+    "aventura": 0.3173,
+    "naturaleza": 0.2518,
+    "descanso": -0.3175,
+    "cultura": 0.3817,
+    "gastronomia": 0.2003,
+    "playa": -0.0796
    },
    "top_terms": [
     "teleferico",
@@ -1665,13 +1665,13 @@
    "rate_barato": 0.1537,
    "rate_caro": 0.0601,
    "t": {
-    "vida_nocturna": -0.2414,
-    "aventura": -0.7931,
-    "naturaleza": -0.6552,
-    "descanso": -0.6552,
-    "cultura": -0.2414,
-    "gastronomia": 0.0345,
-    "playa": -0.5172
+    "vida_nocturna": -0.0693,
+    "aventura": -0.5694,
+    "naturaleza": -0.4444,
+    "descanso": -0.1453,
+    "cultura": -0.3123,
+    "gastronomia": 0.0032,
+    "playa": -0.5063
    },
    "top_terms": [
     "teleferico",
@@ -1698,13 +1698,13 @@
    "rate_barato": 0.1313,
    "rate_caro": 0.0437,
    "t": {
-    "vida_nocturna": 0.0769,
+    "vida_nocturna": 0.202,
     "aventura": -1.0,
-    "naturaleza": -0.7949,
-    "descanso": -0.9487,
-    "cultura": 0.0769,
-    "gastronomia": 0.5897,
-    "playa": -0.3846
+    "naturaleza": -0.8601,
+    "descanso": -0.965,
+    "cultura": -0.1438,
+    "gastronomia": 0.7108,
+    "playa": -0.4587
    },
    "top_terms": [
     "teleferico",
@@ -1731,13 +1731,13 @@
    "rate_barato": 0.0902,
    "rate_caro": 0.0303,
    "t": {
-    "vida_nocturna": -0.7297,
-    "aventura": 0.2432,
-    "naturaleza": 0.7838,
-    "descanso": -0.4054,
-    "cultura": 0.3514,
-    "gastronomia": -0.4054,
-    "playa": -0.027
+    "vida_nocturna": -0.8088,
+    "aventura": 0.4908,
+    "naturaleza": 0.8452,
+    "descanso": -0.2354,
+    "cultura": 0.5635,
+    "gastronomia": -0.5999,
+    "playa": 0.1127
    },
    "top_terms": [
     "selva",
@@ -1764,13 +1764,13 @@
    "rate_barato": 0.1451,
    "rate_caro": 0.0544,
    "t": {
-    "vida_nocturna": -0.0345,
-    "aventura": -0.0345,
-    "naturaleza": 0.7241,
-    "descanso": 0.1724,
-    "cultura": 0.6552,
-    "gastronomia": -0.7241,
-    "playa": 0.2414
+    "vida_nocturna": 0.137,
+    "aventura": 0.0715,
+    "naturaleza": 0.7032,
+    "descanso": 0.4647,
+    "cultura": 0.5566,
+    "gastronomia": -0.4789,
+    "playa": 0.2095
    },
    "top_terms": [
     "selva",
@@ -1797,13 +1797,13 @@
    "rate_barato": 0.1926,
    "rate_caro": 0.0555,
    "t": {
-    "vida_nocturna": 0.6923,
-    "aventura": 0.5385,
-    "naturaleza": 0.5385,
-    "descanso": -0.3333,
-    "cultura": 0.5385,
-    "gastronomia": 0.2821,
-    "playa": 0.2821
+    "vida_nocturna": 0.734,
+    "aventura": 0.087,
+    "naturaleza": 0.115,
+    "descanso": -0.5078,
+    "cultura": 0.2739,
+    "gastronomia": 0.5008,
+    "playa": 0.1083
    },
    "top_terms": [
     "selva",
@@ -1830,12 +1830,12 @@
    "rate_barato": 0.0936,
    "rate_caro": 0.0455,
    "t": {
-    "vida_nocturna": -0.1892,
-    "aventura": -1.0,
-    "naturaleza": -0.6757,
-    "descanso": -0.9459,
-    "cultura": -0.1351,
-    "gastronomia": 0.4054,
+    "vida_nocturna": -0.4077,
+    "aventura": -0.7477,
+    "naturaleza": -0.4079,
+    "descanso": -0.9449,
+    "cultura": 0.2175,
+    "gastronomia": -0.0543,
     "playa": -1.0
    },
    "top_terms": [
@@ -1863,13 +1863,13 @@
    "rate_barato": 0.1593,
    "rate_caro": 0.0389,
    "t": {
-    "vida_nocturna": -0.9487,
-    "aventura": -0.3846,
-    "naturaleza": -0.0256,
-    "descanso": 0.3333,
-    "cultura": -0.3333,
-    "gastronomia": -0.1795,
-    "playa": -0.2308
+    "vida_nocturna": -0.7127,
+    "aventura": -0.5708,
+    "naturaleza": -0.3166,
+    "descanso": -0.0343,
+    "cultura": -0.4798,
+    "gastronomia": 0.1673,
+    "playa": -0.335
    },
    "top_terms": [
     "madero",
@@ -1896,13 +1896,13 @@
    "rate_barato": 0.0844,
    "rate_caro": 0.0247,
    "t": {
-    "vida_nocturna": 0.5135,
-    "aventura": -0.5135,
-    "naturaleza": -0.1351,
-    "descanso": -0.0811,
-    "cultura": 0.6757,
-    "gastronomia": 0.6216,
-    "playa": 0.6216
+    "vida_nocturna": 0.1119,
+    "aventura": -0.1399,
+    "naturaleza": 0.1147,
+    "descanso": -0.0172,
+    "cultura": 0.7818,
+    "gastronomia": 0.0912,
+    "playa": 0.6893
    },
    "top_terms": [
     "janitzio",
@@ -1929,13 +1929,13 @@
    "rate_barato": 0.0992,
    "rate_caro": 0.0189,
    "t": {
-    "vida_nocturna": -0.5862,
-    "aventura": -0.5172,
-    "naturaleza": -0.1724,
-    "descanso": 0.0345,
-    "cultura": 0.7241,
-    "gastronomia": 0.3793,
-    "playa": 0.3793
+    "vida_nocturna": -0.4193,
+    "aventura": -0.3661,
+    "naturaleza": -0.0161,
+    "descanso": 0.3677,
+    "cultura": 0.6004,
+    "gastronomia": 0.2224,
+    "playa": 0.3812
    },
    "top_terms": [
     "janitzio",
@@ -1962,13 +1962,13 @@
    "rate_barato": 0.1108,
    "rate_caro": 0.0299,
    "t": {
-    "vida_nocturna": -0.3333,
-    "aventura": -0.4872,
-    "naturaleza": -0.1795,
-    "descanso": 0.3846,
-    "cultura": 0.8462,
-    "gastronomia": 0.7949,
-    "playa": -0.0769
+    "vida_nocturna": -0.1713,
+    "aventura": -0.6408,
+    "naturaleza": -0.4309,
+    "descanso": 0.0101,
+    "cultura": 0.5306,
+    "gastronomia": 0.8507,
+    "playa": -0.202
    },
    "top_terms": [
     "janitzio",
@@ -1995,12 +1995,12 @@
    "rate_barato": 0.0268,
    "rate_caro": 0.0146,
    "t": {
-    "vida_nocturna": 0.1351,
-    "aventura": -0.027,
-    "naturaleza": -0.3514,
-    "descanso": -0.2432,
-    "cultura": 0.1351,
-    "gastronomia": -0.6757,
+    "vida_nocturna": -0.1614,
+    "aventura": 0.2809,
+    "naturaleza": -0.0869,
+    "descanso": -0.1263,
+    "cultura": 0.418,
+    "gastronomia": -0.7818,
     "playa": -1.0
    },
    "top_terms": [
@@ -2028,12 +2028,12 @@
    "rate_barato": 0.152,
    "rate_caro": 0.0517,
    "t": {
-    "vida_nocturna": -0.2821,
+    "vida_nocturna": -0.1364,
     "aventura": -1.0,
-    "naturaleza": -0.8974,
-    "descanso": 0.1282,
-    "cultura": 0.0256,
-    "gastronomia": 0.8974,
+    "naturaleza": -0.93,
+    "descanso": -0.1742,
+    "cultura": -0.1975,
+    "gastronomia": 0.9207,
     "playa": -1.0
    },
    "top_terms": [
@@ -2061,13 +2061,13 @@
    "rate_barato": 0.0696,
    "rate_caro": 0.0235,
    "t": {
-    "vida_nocturna": -0.6757,
-    "aventura": -0.1351,
-    "naturaleza": -0.027,
-    "descanso": -0.4595,
-    "cultura": 0.7297,
-    "gastronomia": -0.2973,
-    "playa": -0.4595
+    "vida_nocturna": -0.7724,
+    "aventura": 0.2081,
+    "naturaleza": 0.2061,
+    "descanso": -0.2811,
+    "cultura": 0.8181,
+    "gastronomia": -0.5272,
+    "playa": -0.2811
    },
    "top_terms": [
     "chiapas",
@@ -2094,13 +2094,13 @@
    "rate_barato": 0.1447,
    "rate_caro": 0.0426,
    "t": {
-    "vida_nocturna": 0.0345,
-    "aventura": -0.8621,
-    "naturaleza": -0.5862,
-    "descanso": -0.5172,
-    "cultura": 0.5172,
-    "gastronomia": 0.4483,
-    "playa": -0.4483
+    "vida_nocturna": 0.1901,
+    "aventura": -0.6413,
+    "naturaleza": -0.3258,
+    "descanso": -0.0483,
+    "cultura": 0.4596,
+    "gastronomia": 0.2662,
+    "playa": -0.4531
    },
    "top_terms": [
     "chiapas",
@@ -2127,13 +2127,13 @@
    "rate_barato": 0.1249,
    "rate_caro": 0.038,
    "t": {
-    "vida_nocturna": -0.4359,
-    "aventura": -0.4359,
-    "naturaleza": -0.7436,
-    "descanso": -0.4872,
-    "cultura": -0.3846,
-    "gastronomia": 0.4359,
-    "playa": -0.3333
+    "vida_nocturna": -0.2413,
+    "aventura": -0.6058,
+    "naturaleza": -0.8251,
+    "descanso": -0.6127,
+    "cultura": -0.5147,
+    "gastronomia": 0.6058,
+    "playa": -0.4237
    },
    "top_terms": [
     "chiapas",
@@ -2160,12 +2160,12 @@
    "rate_barato": 0.0567,
    "rate_caro": 0.0601,
    "t": {
-    "vida_nocturna": 0.9459,
-    "aventura": 0.8919,
-    "naturaleza": -0.5135,
-    "descanso": 0.9459,
-    "cultura": -0.8919,
-    "gastronomia": 0.4595,
+    "vida_nocturna": 0.8234,
+    "aventura": 0.9273,
+    "naturaleza": -0.2988,
+    "descanso": 0.8421,
+    "cultura": -0.5628,
+    "gastronomia": -0.0179,
     "playa": 1.0
    },
    "top_terms": [
@@ -2193,13 +2193,13 @@
    "rate_barato": 0.0991,
    "rate_caro": 0.0367,
    "t": {
-    "vida_nocturna": 0.7241,
-    "aventura": 0.5172,
-    "naturaleza": -0.7931,
-    "descanso": -0.3103,
-    "cultura": -0.3793,
-    "gastronomia": -0.7931,
-    "playa": 0.7931
+    "vida_nocturna": 0.7593,
+    "aventura": 0.4596,
+    "naturaleza": -0.5321,
+    "descanso": 0.1299,
+    "cultura": -0.4186,
+    "gastronomia": -0.5227,
+    "playa": 0.8124
    },
    "top_terms": [
     "playa",
@@ -2226,13 +2226,13 @@
    "rate_barato": 0.15,
    "rate_caro": 0.0438,
    "t": {
-    "vida_nocturna": 0.641,
-    "aventura": 0.7436,
-    "naturaleza": -0.4872,
-    "descanso": 0.0256,
-    "cultura": -0.1282,
-    "gastronomia": 0.9487,
-    "playa": 0.8462
+    "vida_nocturna": 0.699,
+    "aventura": 0.283,
+    "naturaleza": -0.6501,
+    "descanso": -0.2442,
+    "cultura": -0.3305,
+    "gastronomia": 0.9557,
+    "playa": 0.7642
    },
    "top_terms": [
     "playa",
@@ -2259,13 +2259,13 @@
    "rate_barato": 0.047,
    "rate_caro": 0.0256,
    "t": {
-    "vida_nocturna": -0.5135,
-    "aventura": 0.9459,
-    "naturaleza": 0.6216,
-    "descanso": 0.027,
-    "cultura": -1.0,
-    "gastronomia": -0.8919,
-    "playa": -0.3514
+    "vida_nocturna": -0.654,
+    "aventura": 0.9636,
+    "naturaleza": 0.736,
+    "descanso": 0.0649,
+    "cultura": -0.8879,
+    "gastronomia": -0.9273,
+    "playa": -0.199
    },
    "top_terms": [
     "piedrotas",
@@ -2292,13 +2292,13 @@
    "rate_barato": 0.0493,
    "rate_caro": 0.0246,
    "t": {
-    "vida_nocturna": -0.7241,
-    "aventura": 0.0345,
-    "naturaleza": -0.0345,
-    "descanso": -0.0345,
-    "cultura": 0.3793,
-    "gastronomia": 0.931,
-    "playa": -0.1034
+    "vida_nocturna": -0.6938,
+    "aventura": 0.1154,
+    "naturaleza": 0.0809,
+    "descanso": 0.3145,
+    "cultura": 0.3065,
+    "gastronomia": 0.7599,
+    "playa": -0.0657
    },
    "top_terms": [
     "piedrotas",
@@ -2325,12 +2325,12 @@
    "rate_barato": 0.1389,
    "rate_caro": 0.0347,
    "t": {
-    "vida_nocturna": -0.8462,
-    "aventura": 0.5897,
-    "naturaleza": 0.6923,
-    "descanso": 0.4359,
-    "cultura": 0.7436,
-    "gastronomia": -0.4359,
+    "vida_nocturna": -0.5773,
+    "aventura": 0.15,
+    "naturaleza": 0.2667,
+    "descanso": 0.0451,
+    "cultura": 0.4512,
+    "gastronomia": -0.0077,
     "playa": -1.0
    },
    "top_terms": [
@@ -2358,13 +2358,13 @@
    "rate_barato": 0.0889,
    "rate_caro": 0.0398,
    "t": {
-    "vida_nocturna": 0.4595,
-    "aventura": -0.4595,
-    "naturaleza": -0.4595,
-    "descanso": -0.7838,
-    "cultura": 0.2973,
-    "gastronomia": -0.6216,
-    "playa": -0.6757
+    "vida_nocturna": 0.0568,
+    "aventura": -0.0755,
+    "naturaleza": -0.2251,
+    "descanso": -0.6956,
+    "cultura": 0.5272,
+    "gastronomia": -0.7454,
+    "playa": -0.5481
    },
    "top_terms": [
     "teleferico",
@@ -2391,13 +2391,13 @@
    "rate_barato": 0.1367,
    "rate_caro": 0.0889,
    "t": {
-    "vida_nocturna": 0.6552,
-    "aventura": -0.1724,
-    "naturaleza": -0.2414,
-    "descanso": -0.4483,
-    "cultura": 0.3103,
-    "gastronomia": -0.5172,
-    "playa": -0.3103
+    "vida_nocturna": 0.6967,
+    "aventura": -0.0255,
+    "naturaleza": -0.0693,
+    "descanso": 0.0048,
+    "cultura": 0.244,
+    "gastronomia": -0.3474,
+    "playa": -0.3374
    },
    "top_terms": [
     "teleferico",
@@ -2424,13 +2424,13 @@
    "rate_barato": 0.1688,
    "rate_caro": 0.0473,
    "t": {
-    "vida_nocturna": -0.0256,
-    "aventura": 0.2308,
-    "naturaleza": -0.5897,
-    "descanso": 0.7436,
-    "cultura": 0.641,
-    "gastronomia": -0.5897,
-    "playa": 0.0256
+    "vida_nocturna": 0.1133,
+    "aventura": -0.151,
+    "naturaleza": -0.7201,
+    "descanso": 0.2737,
+    "cultura": 0.3626,
+    "gastronomia": -0.1126,
+    "playa": -0.132
    },
    "top_terms": [
     "teleferico",
@@ -2457,13 +2457,13 @@
    "rate_barato": 0.1001,
    "rate_caro": 0.0472,
    "t": {
-    "vida_nocturna": -0.6216,
-    "aventura": -0.2432,
-    "naturaleza": -0.8378,
-    "descanso": -0.5676,
-    "cultura": 0.8919,
-    "gastronomia": -0.7838,
-    "playa": -0.2973
+    "vida_nocturna": -0.7267,
+    "aventura": 0.1074,
+    "naturaleza": -0.5918,
+    "descanso": -0.4006,
+    "cultura": 0.9273,
+    "gastronomia": -0.8545,
+    "playa": -0.1346
    },
    "top_terms": [
     "piramides",
@@ -2490,13 +2490,13 @@
    "rate_barato": 0.0862,
    "rate_caro": 0.1045,
    "t": {
-    "vida_nocturna": 0.1282,
-    "aventura": 0.9487,
-    "naturaleza": 0.0256,
-    "descanso": -0.3846,
-    "cultura": 1.0,
-    "gastronomia": -1.0,
-    "playa": 0.0769
+    "vida_nocturna": 0.2837,
+    "aventura": 0.4416,
+    "naturaleza": -0.2629,
+    "descanso": -0.5428,
+    "cultura": 0.7477,
+    "gastronomia": -0.4486,
+    "playa": -0.0877
    },
    "top_terms": [
     "piramides",
@@ -2523,12 +2523,12 @@
    "rate_barato": 0.16,
    "rate_caro": 0.016,
    "t": {
-    "vida_nocturna": -0.2432,
-    "aventura": 0.2973,
-    "naturaleza": -0.2432,
-    "descanso": 0.2432,
-    "cultura": 0.8378,
-    "gastronomia": -0.0811,
+    "vida_nocturna": -0.4441,
+    "aventura": 0.5272,
+    "naturaleza": 0.0232,
+    "descanso": 0.2104,
+    "cultura": 0.8909,
+    "gastronomia": -0.3817,
     "playa": -1.0
    },
    "top_terms": [
@@ -2556,12 +2556,12 @@
    "rate_barato": 0.0709,
    "rate_caro": 0.0342,
    "t": {
-    "vida_nocturna": -0.8621,
+    "vida_nocturna": -0.8095,
     "aventura": -1.0,
-    "naturaleza": -1.0,
-    "descanso": -1.0,
-    "cultura": -1.0,
-    "gastronomia": 0.5862,
+    "naturaleza": -0.8131,
+    "descanso": -0.3645,
+    "cultura": -0.972,
+    "gastronomia": 0.3632,
     "playa": -1.0
    },
    "top_terms": [
@@ -2589,12 +2589,12 @@
    "rate_barato": 0.1441,
    "rate_caro": 0.0537,
    "t": {
-    "vida_nocturna": -0.3846,
-    "aventura": 0.4872,
-    "naturaleza": 0.4872,
-    "descanso": 0.4872,
-    "cultura": 0.8974,
-    "gastronomia": -0.641,
+    "vida_nocturna": -0.2063,
+    "aventura": 0.052,
+    "naturaleza": 0.0613,
+    "descanso": 0.0894,
+    "cultura": 0.5749,
+    "gastronomia": -0.1476,
     "playa": -1.0
    },
    "top_terms": [
@@ -2622,13 +2622,13 @@
    "rate_barato": 0.096,
    "rate_caro": 0.0237,
    "t": {
-    "vida_nocturna": 0.3514,
-    "aventura": 0.4595,
-    "naturaleza": 0.0811,
-    "descanso": 0.4054,
-    "cultura": 0.4595,
-    "gastronomia": 0.3514,
-    "playa": -0.1351
+    "vida_nocturna": -0.0159,
+    "aventura": 0.6363,
+    "naturaleza": 0.2882,
+    "descanso": 0.3195,
+    "cultura": 0.6363,
+    "gastronomia": -0.0907,
+    "playa": 0.0306
    },
    "top_terms": [
     "tepozteco",
@@ -2655,13 +2655,13 @@
    "rate_barato": 0.0605,
    "rate_caro": 0.0882,
    "t": {
-    "vida_nocturna": -0.3793,
-    "aventura": -0.3103,
-    "naturaleza": 0.2414,
+    "vida_nocturna": -0.2784,
+    "aventura": -0.1318,
+    "naturaleza": 0.2936,
     "descanso": 1.0,
-    "cultura": -0.7931,
-    "gastronomia": -0.5862,
-    "playa": -0.3793
+    "cultura": -0.7657,
+    "gastronomia": -0.3912,
+    "playa": -0.3906
    },
    "top_terms": [
     "tepozteco",
@@ -2688,12 +2688,12 @@
    "rate_barato": 0.1218,
    "rate_caro": 0.0747,
    "t": {
-    "vida_nocturna": -0.7949,
-    "aventura": 0.1282,
-    "naturaleza": 0.641,
-    "descanso": -0.5385,
-    "cultura": -0.2821,
-    "gastronomia": 0.0769,
+    "vida_nocturna": -0.5329,
+    "aventura": -0.2209,
+    "naturaleza": 0.213,
+    "descanso": -0.6477,
+    "cultura": -0.4448,
+    "gastronomia": 0.3609,
     "playa": -1.0
    },
    "top_terms": [
@@ -2721,13 +2721,13 @@
    "rate_barato": 0.1055,
    "rate_caro": 0.0516,
    "t": {
-    "vida_nocturna": 0.8378,
-    "aventura": -0.9459,
-    "naturaleza": -0.2973,
-    "descanso": -1.0,
-    "cultura": -0.027,
-    "gastronomia": 0.7297,
-    "playa": -0.5676
+    "vida_nocturna": 0.5638,
+    "aventura": -0.6272,
+    "naturaleza": -0.0412,
+    "descanso": -0.9813,
+    "cultura": 0.2996,
+    "gastronomia": 0.1639,
+    "playa": -0.3913
    },
    "top_terms": [
     "cuervo",
@@ -2754,13 +2754,13 @@
    "rate_barato": 0.148,
    "rate_caro": 0.06,
    "t": {
-    "vida_nocturna": 0.5862,
-    "aventura": -0.5862,
-    "naturaleza": -0.3793,
-    "descanso": -0.7241,
-    "cultura": 0.5862,
-    "gastronomia": -0.931,
-    "playa": -0.1724
+    "vida_nocturna": 0.6342,
+    "aventura": -0.4099,
+    "naturaleza": -0.1756,
+    "descanso": -0.1892,
+    "cultura": 0.5034,
+    "gastronomia": -0.6104,
+    "playa": -0.1563
    },
    "top_terms": [
     "cuervo",
@@ -2787,13 +2787,13 @@
    "rate_barato": 0.0843,
    "rate_caro": 0.0396,
    "t": {
-    "vida_nocturna": -0.2308,
-    "aventura": -0.2821,
-    "naturaleza": -0.4359,
-    "descanso": -0.7436,
-    "cultura": 0.1282,
-    "gastronomia": -0.7436,
-    "playa": 0.2308
+    "vida_nocturna": -0.0733,
+    "aventura": -0.5008,
+    "naturaleza": -0.6151,
+    "descanso": -0.797,
+    "cultura": -0.0994,
+    "gastronomia": -0.2176,
+    "playa": 0.0266
    },
    "top_terms": [
     "cuervo",
@@ -2820,12 +2820,12 @@
    "rate_barato": 0.0322,
    "rate_caro": 0.008,
    "t": {
-    "vida_nocturna": 0.4054,
-    "aventura": -0.7297,
-    "naturaleza": -0.8919,
-    "descanso": 1.0,
-    "cultura": -0.0811,
-    "gastronomia": 0.8378,
+    "vida_nocturna": 0.0205,
+    "aventura": -0.3602,
+    "naturaleza": -0.6469,
+    "descanso": 0.9813,
+    "cultura": 0.2632,
+    "gastronomia": 0.2367,
     "playa": -1.0
    },
    "top_terms": [
@@ -2853,12 +2853,12 @@
    "rate_barato": 0.1218,
    "rate_caro": 0.1039,
    "t": {
-    "vida_nocturna": 0.1034,
-    "aventura": 0.1034,
-    "naturaleza": -0.1034,
-    "descanso": 0.1034,
-    "cultura": -0.1724,
-    "gastronomia": -0.4483,
+    "vida_nocturna": 0.234,
+    "aventura": 0.1592,
+    "naturaleza": 0.0277,
+    "descanso": 0.4115,
+    "cultura": -0.2591,
+    "gastronomia": -0.3036,
     "playa": -1.0
    },
    "top_terms": [
@@ -2886,13 +2886,13 @@
    "rate_barato": 0.1152,
    "rate_caro": 0.0402,
    "t": {
-    "vida_nocturna": 0.1795,
-    "aventura": -0.5897,
-    "naturaleza": -0.8462,
-    "descanso": -0.4359,
-    "cultura": 0.3333,
-    "gastronomia": 0.641,
-    "playa": 0.1282
+    "vida_nocturna": 0.3187,
+    "aventura": -0.7108,
+    "naturaleza": -0.895,
+    "descanso": -0.5778,
+    "cultura": 0.0779,
+    "gastronomia": 0.7457,
+    "playa": -0.0527
    },
    "top_terms": [
     "tequis",
@@ -2919,13 +2919,13 @@
    "rate_barato": 0.1108,
    "rate_caro": 0.0458,
    "t": {
-    "vida_nocturna": 0.6757,
-    "aventura": -0.8919,
-    "naturaleza": -1.0,
-    "descanso": -0.7297,
-    "cultura": 0.5676,
-    "gastronomia": 0.2973,
-    "playa": -0.6216
+    "vida_nocturna": 0.3705,
+    "aventura": -0.488,
+    "naturaleza": -0.8598,
+    "descanso": -0.6499,
+    "cultura": 0.709,
+    "gastronomia": -0.1271,
+    "playa": -0.4463
    },
    "top_terms": [
     "parian",
@@ -2952,13 +2952,13 @@
    "rate_barato": 0.108,
    "rate_caro": 0.0327,
    "t": {
-    "vida_nocturna": 0.4483,
-    "aventura": -0.7241,
-    "naturaleza": -0.3103,
-    "descanso": -0.3793,
-    "cultura": 0.1724,
-    "gastronomia": 0.7241,
-    "playa": 0.1034
+    "vida_nocturna": 0.5185,
+    "aventura": -0.5256,
+    "naturaleza": -0.1225,
+    "descanso": 0.0674,
+    "cultura": 0.0442,
+    "gastronomia": 0.4695,
+    "playa": 0.0751
    },
    "top_terms": [
     "parian",
@@ -2985,13 +2985,13 @@
    "rate_barato": 0.0678,
    "rate_caro": 0.0728,
    "t": {
-    "vida_nocturna": 0.8462,
-    "aventura": 0.0769,
-    "naturaleza": -0.1282,
-    "descanso": 0.5385,
-    "cultura": 0.1795,
-    "gastronomia": -0.8462,
-    "playa": -0.4872
+    "vida_nocturna": 0.8483,
+    "aventura": -0.2559,
+    "naturaleza": -0.3959,
+    "descanso": 0.1244,
+    "cultura": -0.0645,
+    "gastronomia": -0.3063,
+    "playa": -0.5286
    },
    "top_terms": [
     "parian",
@@ -3018,13 +3018,13 @@
    "rate_barato": 0.0614,
    "rate_caro": 0.0525,
    "t": {
-    "vida_nocturna": 0.8919,
+    "vida_nocturna": 0.731,
     "aventura": 1.0,
-    "naturaleza": -0.1892,
-    "descanso": 0.6216,
-    "cultura": -0.6757,
-    "gastronomia": 0.5135,
-    "playa": 0.8919
+    "naturaleza": 0.069,
+    "descanso": 0.5491,
+    "cultura": -0.3051,
+    "gastronomia": 0.0184,
+    "playa": 0.9086
    },
    "top_terms": [
     "santos",
@@ -3051,13 +3051,13 @@
    "rate_barato": 0.0997,
    "rate_caro": 0.0601,
    "t": {
-    "vida_nocturna": 0.8974,
-    "aventura": 0.8974,
-    "naturaleza": 0.7949,
-    "descanso": 1.0,
-    "cultura": -0.5385,
-    "gastronomia": 0.3333,
-    "playa": 0.7436
+    "vida_nocturna": 0.9113,
+    "aventura": 0.3973,
+    "naturaleza": 0.4208,
+    "descanso": 0.5421,
+    "cultura": -0.6477,
+    "gastronomia": 0.5358,
+    "playa": 0.6849
    },
    "top_terms": [
     "santos",
@@ -3084,13 +3084,13 @@
    "rate_barato": 0.0929,
    "rate_caro": 0.0567,
    "t": {
-    "vida_nocturna": 0.2432,
-    "aventura": 0.8378,
-    "naturaleza": 0.2432,
-    "descanso": -0.1892,
-    "cultura": 0.4054,
-    "gastronomia": -0.5135,
-    "playa": 0.8378
+    "vida_nocturna": -0.0887,
+    "aventura": 0.8909,
+    "naturaleza": 0.4254,
+    "descanso": -0.0899,
+    "cultura": 0.5999,
+    "gastronomia": -0.6726,
+    "playa": 0.8628
    },
    "top_terms": [
     "playa",
@@ -3117,13 +3117,13 @@
    "rate_barato": 0.0775,
    "rate_caro": 0.0575,
    "t": {
-    "vida_nocturna": 0.931,
-    "aventura": 0.7241,
-    "naturaleza": 0.1724,
-    "descanso": 0.3103,
-    "cultura": 0.0345,
-    "gastronomia": -0.2414,
-    "playa": 0.931
+    "vida_nocturna": 0.9468,
+    "aventura": 0.6191,
+    "naturaleza": 0.2404,
+    "descanso": 0.5524,
+    "cultura": -0.0622,
+    "gastronomia": -0.1721,
+    "playa": 0.9375
    },
    "top_terms": [
     "playa",
@@ -3151,12 +3151,12 @@
    "rate_caro": 0.0513,
    "t": {
     "vida_nocturna": 1.0,
-    "aventura": 0.641,
-    "naturaleza": -0.2821,
-    "descanso": -0.0769,
-    "cultura": -0.5897,
-    "gastronomia": -0.8974,
-    "playa": 0.9487
+    "aventura": 0.1943,
+    "naturaleza": -0.5102,
+    "descanso": -0.3142,
+    "cultura": -0.7014,
+    "gastronomia": -0.3506,
+    "playa": 0.8435
    },
    "top_terms": [
     "playa",
@@ -3183,13 +3183,13 @@
    "rate_barato": 0.0829,
    "rate_caro": 0.0333,
    "t": {
-    "vida_nocturna": -0.027,
-    "aventura": 0.5676,
-    "naturaleza": 0.5135,
-    "descanso": 0.1351,
-    "cultura": 0.1892,
-    "gastronomia": 0.2432,
-    "playa": 0.1892
+    "vida_nocturna": -0.2986,
+    "aventura": 0.709,
+    "naturaleza": 0.6633,
+    "descanso": 0.1377,
+    "cultura": 0.4544,
+    "gastronomia": -0.1634,
+    "playa": 0.3142
    },
    "top_terms": [
     "cenote",
@@ -3216,13 +3216,13 @@
    "rate_barato": 0.2192,
    "rate_caro": 0.0337,
    "t": {
-    "vida_nocturna": -0.1724,
-    "aventura": 0.3793,
-    "naturaleza": 0.4483,
-    "descanso": -0.2414,
-    "cultura": 1.0,
-    "gastronomia": 0.8621,
-    "playa": 0.5862
+    "vida_nocturna": -0.0068,
+    "aventura": 0.3719,
+    "naturaleza": 0.5092,
+    "descanso": 0.183,
+    "cultura": 0.8318,
+    "gastronomia": 0.5759,
+    "playa": 0.5314
    },
    "top_terms": [
     "cenote",
@@ -3249,13 +3249,13 @@
    "rate_barato": 0.1187,
    "rate_caro": 0.0319,
    "t": {
-    "vida_nocturna": -0.1282,
-    "aventura": 0.8462,
-    "naturaleza": 0.8974,
-    "descanso": 0.5897,
-    "cultura": 0.9487,
-    "gastronomia": -0.4872,
-    "playa": 0.3846
+    "vida_nocturna": 0.034,
+    "aventura": 0.3623,
+    "naturaleza": 0.5655,
+    "descanso": 0.1594,
+    "cultura": 0.6099,
+    "gastronomia": -0.0427,
+    "playa": 0.2624
    },
    "top_terms": [
     "cenote",
@@ -3282,13 +3282,13 @@
    "rate_barato": 0.0623,
    "rate_caro": 0.0305,
    "t": {
-    "vida_nocturna": -0.9459,
-    "aventura": 0.5135,
-    "naturaleza": 0.8378,
-    "descanso": 0.5676,
-    "cultura": -0.7297,
-    "gastronomia": -0.1351,
-    "playa": 0.1351
+    "vida_nocturna": -0.9636,
+    "aventura": 0.6726,
+    "naturaleza": 0.8909,
+    "descanso": 0.5034,
+    "cultura": -0.3415,
+    "gastronomia": -0.418,
+    "playa": 0.2498
    },
    "top_terms": [
     "avandaro",
@@ -3315,13 +3315,13 @@
    "rate_barato": 0.0414,
    "rate_caro": 0.0915,
    "t": {
-    "vida_nocturna": -0.4483,
-    "aventura": 0.1724,
-    "naturaleza": 0.8621,
-    "descanso": 0.931,
-    "cultura": -0.931,
-    "gastronomia": -0.6552,
-    "playa": -0.0345
+    "vida_nocturna": -0.3223,
+    "aventura": 0.2124,
+    "naturaleza": 0.8002,
+    "descanso": 0.9562,
+    "cultura": -0.8908,
+    "gastronomia": -0.4351,
+    "playa": -0.0219
    },
    "top_terms": [
     "avandaro",
@@ -3348,13 +3348,13 @@
    "rate_barato": 0.0841,
    "rate_caro": 0.0421,
    "t": {
-    "vida_nocturna": -0.5897,
-    "aventura": 0.0256,
-    "naturaleza": 0.8462,
-    "descanso": -0.1795,
-    "cultura": -0.7949,
-    "gastronomia": 0.0256,
-    "playa": 0.1795
+    "vida_nocturna": -0.3556,
+    "aventura": -0.2909,
+    "naturaleza": 0.4838,
+    "descanso": -0.4028,
+    "cultura": -0.8507,
+    "gastronomia": 0.3166,
+    "playa": -0.0084
    },
    "top_terms": [
     "avandaro",
@@ -3382,12 +3382,12 @@
    "rate_caro": 0.0316,
    "t": {
     "vida_nocturna": -1.0,
-    "aventura": 0.3514,
-    "naturaleza": 0.8919,
-    "descanso": -0.2973,
-    "cultura": -0.5135,
-    "gastronomia": 0.027,
-    "playa": 0.2432
+    "aventura": 0.5635,
+    "naturaleza": 0.9273,
+    "descanso": -0.1627,
+    "cultura": -0.1119,
+    "gastronomia": -0.3089,
+    "playa": 0.3693
    },
    "top_terms": [
     "edward",
@@ -3414,12 +3414,12 @@
    "rate_barato": 0.0559,
    "rate_caro": 0.0994,
    "t": {
-    "vida_nocturna": 0.5172,
-    "aventura": 0.3103,
-    "naturaleza": 0.6552,
-    "descanso": -0.5862,
-    "cultura": 0.931,
-    "gastronomia": 0.1724,
+    "vida_nocturna": 0.5624,
+    "aventura": 0.3,
+    "naturaleza": 0.6594,
+    "descanso": -0.1015,
+    "cultura": 0.7599,
+    "gastronomia": 0.0909,
     "playa": -1.0
    },
    "top_terms": [
@@ -3447,13 +3447,13 @@
    "rate_barato": 0.1662,
    "rate_caro": 0.0344,
    "t": {
-    "vida_nocturna": -1.0,
-    "aventura": -0.1282,
-    "naturaleza": 0.7436,
-    "descanso": 0.9487,
-    "cultura": 0.3846,
-    "gastronomia": -0.5385,
-    "playa": 0.3333
+    "vida_nocturna": -0.7477,
+    "aventura": -0.3959,
+    "naturaleza": 0.3671,
+    "descanso": 0.4323,
+    "cultura": 0.1222,
+    "gastronomia": -0.0776,
+    "playa": 0.1994
    },
    "top_terms": [
     "edward",
@@ -3480,13 +3480,13 @@
    "rate_barato": 0.1139,
    "rate_caro": 0.0188,
    "t": {
-    "vida_nocturna": -0.4595,
-    "aventura": 0.6216,
-    "naturaleza": 0.5676,
-    "descanso": -0.3514,
-    "cultura": -0.2973,
-    "gastronomia": -0.1892,
-    "playa": -0.1892
+    "vida_nocturna": -0.6176,
+    "aventura": 0.7454,
+    "naturaleza": 0.6997,
+    "descanso": -0.199,
+    "cultura": 0.0429,
+    "gastronomia": -0.4544,
+    "playa": -0.0432
    },
    "top_terms": [
     "relojes",
@@ -3513,12 +3513,12 @@
    "rate_barato": 0.1722,
    "rate_caro": 0.0444,
    "t": {
-    "vida_nocturna": -0.931,
-    "aventura": -0.6552,
-    "naturaleza": 0.3103,
-    "descanso": 0.4483,
-    "cultura": -0.0345,
-    "gastronomia": -0.3103,
+    "vida_nocturna": -0.8908,
+    "aventura": -0.4631,
+    "naturaleza": 0.3561,
+    "descanso": 0.64,
+    "cultura": -0.1154,
+    "gastronomia": -0.2159,
     "playa": -1.0
    },
    "top_terms": [
@@ -3546,12 +3546,12 @@
    "rate_barato": 0.2006,
    "rate_caro": 0.0385,
    "t": {
-    "vida_nocturna": 0.3846,
-    "aventura": -0.0256,
-    "naturaleza": -0.0769,
-    "descanso": -0.6923,
-    "cultura": -0.2308,
-    "gastronomia": -0.2821,
+    "vida_nocturna": 0.468,
+    "aventura": -0.3259,
+    "naturaleza": -0.3609,
+    "descanso": -0.762,
+    "cultura": -0.4098,
+    "gastronomia": 0.0973,
     "playa": -1.0
    },
    "top_terms": [

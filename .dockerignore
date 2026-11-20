@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+notebooks
+docs
+data/raw/*.csv
+spark-warehouse
+metastore_db
+.DS_Store

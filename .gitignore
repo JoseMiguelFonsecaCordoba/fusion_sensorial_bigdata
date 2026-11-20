@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+data/raw/*.csv
+data/processed/*
+!data/processed/.gitkeep
+# los perfiles son pequeños y el front los necesita sin correr Spark
+!data/processed/profiles.json
+.env
+spark-warehouse/
+metastore_db/
+.DS_Store

@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: fusion-sensorial
+    ports:
+      - "8000:8000"
+    # data/ montado: el CSV va en data/raw/ y los perfiles recalculados se quedan en tu disco
+    volumes:
+      - ./data:/app/data

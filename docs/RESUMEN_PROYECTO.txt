@@ -41,7 +41,7 @@ de valor/precio percibido (Índice de Valor), que permite detectar "joyas oculta
                             profiles.json (108 filas)
 - Parte Big Data: todo lo de build_profiles.py (Spark DataFrames, Window, joins, agregaciones,
   TF-IDF distribuido) y la fiabilidad por mitades.
-- Parte recomendación: sensory.py, recommender.py, main.py, evaluate.py (Python puro sobre
+- Parte recomendación: sensory.py, recommender.py, main.py, evaluate.py, web.py (Python puro sobre
   la tabla pequeña de perfiles).
 - Honestidad técnica: el dataset (61 MB) cabe en memoria de una laptop. Spark se justifica
   por el procesamiento de texto a escala, por el diseño escalable (el mismo código corre
@@ -93,7 +93,12 @@ Ejes en [0,1]: A = activación, P = positividad, W = calidez.
 - Tabla de top-2 por preset de género (python -m src.evaluate --presets).
 - Primera versión: PASS en los tres chequeos de coherencia. Hallazgo: la normalización solo
   dentro del Type hacía que los restaurantes dominaran; se corrigió con la mezcla de percentiles.
-  (Completar aquí con la salida final de evaluate tras la ejecución definitiva.)
+- Salida final (perfiles con mezcla de percentiles, 19-nov-2026):
+  PASS fiesta: t medio del top-5 en vida nocturna/aventura = +0.48 (Loreto, Sayulita, Isla Mujeres).
+  PASS calma: t medio del top-5 en descanso/naturaleza = +0.33 (Xilitla · Attractive, Atlixco, Chiapa de Corzo).
+  PASS presupuesto: valor medio del top-10 sube de 0.46 a 0.79.
+  Cobertura con 200 perfiles aleatorios: 69/108 unidades (64%); reparto del top-10:
+  Restaurant 39%, Attractive 34%, Hotel 27%.
 
 8. CÓMO EJECUTARLO
 Requisitos: Python 3.10+, Java 17+, pip install pyspark Pillow.
@@ -103,6 +108,7 @@ Requisitos: Python 3.10+, Java 17+, pip install pyspark Pillow.
   python -m src.main --preset reggaeton --color "#FF8800" --presupuesto 0.5
   python -m src.main --color "#6FA8DC" --presupuesto 0.8 --solo-joyas --vista destinos
   python -m src.main --listar-presets
+  python -m src.web                     # front web en http://localhost:8000
 Ejecutar siempre desde la raíz del proyecto. Se ejecutó con éxito en Google Colab
 (208,051 reseñas, 108 unidades).
 
