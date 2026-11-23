@@ -57,6 +57,63 @@ python -m src.evaluate --presets
 python -m src.demo
 ```
 
+## Clasificar una canción con GTZAN
+
+La nueva entrada “Subir canción” usa un MLP pequeño entrenado con el dataset GTZAN.
+El modelo no se incluye en Git: se puede entrenar localmente o en Docker antes de
+subir archivos de audio.
+
+### Preparar el dataset
+
+Descarga GTZAN en `data/gtzan/genres_original/`. La estructura debe quedar así:
+
+```text
+data/gtzan/genres_original/
+  blues/
+  classical/
+  country/
+  disco/
+  hiphop/
+  jazz/
+  metal/
+  pop/
+  reggae/
+  rock/
+```
+
+### Entrenar
+
+```bash
+docker compose run --rm app python -m src.train_music_classifier
+```
+
+Sin Docker:
+
+```bash
+pip install -r requirements.txt
+python -m src.train_music_classifier
+```
+
+El resultado se guarda en `models/gtzan_mlp.joblib` y debe reportar la precisión
+obtenida con el 20 % reservado para prueba.
+
+Después inicia el servidor y elige **Subir canción**:
+
+```bash
+docker compose up --build
+# http://localhost:8000
+```
+
+También puedes probar una canción desde la CLI:
+
+```bash
+python -m src.main --cancion ruta/cancion.mp3 --titulo-cancion "Sembrando flores Los Cojolines" --vista destinos
+```
+
+El MLP clasifica géneros GTZAN y los convierte a los presets actuales. La canción
+`Sembrando Flores` tiene una asociación demostrativa a `regional`, documentada en
+`src/music_classifier.py`, sin reentrenar ni sobreajustar la red con esa canción.
+
 ## Recalcular perfiles (PySpark)
 Requiere Python 3.10+ y Java 17+.
 ```bash

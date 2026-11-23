@@ -7,13 +7,18 @@ import argparse
 import base64
 import io
 import json
+import os
+import tempfile
+from email.parser import BytesParser
+from email.policy import default
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
 
-from . import config, recommender, sensory
+from . import config, music_classifier, recommender, sensory
 from .lexicon import LABELS, TOURISM_DIMS
 
 INDEX = config.ROOT / "web" / "index.html"
-MAX_BODY = 8 * 1024 * 1024  # imágenes en base64
+MAX_BODY = 25 * 1024 * 1024  # imágenes y archivos de audio
 TYPES = ("Hotel", "Restaurant", "Attractive")
 
 
@@ -86,16 +91,51 @@ def make_handler(units, presets):
                 self._send(404, b'{"error": "no encontrado"}')
 
         def do_POST(self):
-            if self.path != "/api/recommend":
-                return self._send(404, b'{"error": "no encontrado"}')
             size = int(self.headers.get("Content-Length") or 0)
             if size > MAX_BODY:
-                return self._send(413, b'{"error": "la imagen es demasiado grande (max. ~6 MB)"}')
+                return self._send(413, b'{"error": "el archivo es demasiado grande (max. 25 MB)"}')
+            body = self.rfile.read(size)
             try:
-                out = recommend(json.loads(self.rfile.read(size)), units, presets)
-                self._send(200, json.dumps(out, ensure_ascii=False).encode())
+                if self.path == "/api/recommend":
+                    out = recommend(json.loads(body), units, presets)
+                    return self._send(200, json.dumps(out, ensure_ascii=False).encode())
+                if self.path == "/api/classify":
+                    ctype = self.headers.get("Content-Type", "")
+                    if "multipart/form-data" not in ctype:
+                        raise ValueError("Se esperaba multipart/form-data")
+                    mime = BytesParser(policy=default).parsebytes(
+                        b"Content-Type: " + ctype.encode() + b"\r\nMIME-Version: 1.0\r\n\r\n" + body
+                    )
+                    title = ""
+                    upload = None
+                    filename = ""
+                    for part in mime.iter_parts():
+                        name = part.get_param("name", header="content-disposition")
+                        if name == "title":
+                            payload = part.get_payload(decode=True)
+                            title = (payload or b"").decode("utf-8", "replace")
+                        elif name == "song":
+                            filename = part.get_filename() or "cancion"
+                            payload = part.get_payload(decode=True)
+                            if payload:
+                                upload = payload
+                    if upload is None:
+                        raise ValueError("Selecciona un archivo de audio")
+                    suffix = Path(filename).suffix.lower() or ".wav"
+                    if suffix not in (".wav", ".au", ".aiff", ".flac", ".ogg", ".mp3", ".m4a"):
+                        raise ValueError("Formato no compatible")
+                    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+                        tmp.write(upload)
+                        tmp_path = tmp.name
+                    try:
+                        result = music_classifier.classify_audio(tmp_path, title=title)
+                        return self._send(200, json.dumps(result, ensure_ascii=False).encode())
+                    finally:
+                        os.unlink(tmp_path)
+                return self._send(404, b'{"error": "no encontrado"}')
             except Exception as e:  # entrada inválida del cliente: se reporta, no tumba el servidor
-                self._send(400, json.dumps({"error": str(e)}, ensure_ascii=False).encode())
+                status = 503 if isinstance(e, FileNotFoundError) else 400
+                self._send(status, json.dumps({"error": str(e)}, ensure_ascii=False).encode())
 
         def log_message(self, *args):
             pass

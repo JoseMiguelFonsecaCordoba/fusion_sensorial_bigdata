@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = Path(os.getenv("RESTMEX_CSV", ROOT / "data" / "raw" / "Rest-Mex_2025_train_clean.csv"))
 PROFILES_PATH = ROOT / "data" / "processed" / "profiles.json"
 PRESETS_PATH = ROOT / "data" / "presets.json"
+MUSIC_MODEL_PATH = ROOT / "models" / "gtzan_mlp.joblib"
 
 # --- Procesamiento (Spark) ---
 MIN_REVIEWS = 150     # mínimo de reseñas por (Town, Type); ~percentil 10 real de los datos

@@ -2,7 +2,7 @@
 FROM python:3.12-slim-bookworm
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends openjdk-17-jre-headless \
+ && apt-get install -y --no-install-recommends openjdk-17-jre-headless ffmpeg \
  && rm -rf /var/lib/apt/lists/*
 # sin JAVA_HOME fijo: PySpark usa el `java` del PATH (funciona en amd64 y arm64)
 ENV PYTHONUNBUFFERED=1 \

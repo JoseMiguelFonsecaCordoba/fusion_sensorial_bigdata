@@ -9,3 +9,5 @@ data/processed/*
 spark-warehouse/
 metastore_db/
 .DS_Store
+data/gtzan/
+models/*.joblib

@@ -8,8 +8,9 @@ Ejemplos:
   python -m src.main --playlist-csv mi_playlist.csv --imagen foto.jpg --vista destinos
 """
 import argparse
+from pathlib import Path
 
-from . import config, recommender, sensory
+from . import config, music_classifier, recommender, sensory
 
 
 def parse_args():
@@ -22,6 +23,8 @@ def parse_args():
     m.add_argument("--danceability", type=float)
     m.add_argument("--valence", type=float)
     m.add_argument("--playlist-csv", help="CSV con columnas bpm|tempo, energy, danceability, valence")
+    m.add_argument("--cancion", help="archivo de audio para clasificar con el MLP GTZAN")
+    m.add_argument("--titulo-cancion", help="titulo y artista; permite reconocer la demostracion especial")
     c = p.add_argument_group("color")
     c.add_argument("--color", help="código hexadecimal, p. ej. #FF5500")
     c.add_argument("--imagen", help="ruta de una imagen (requiere Pillow)")
@@ -42,6 +45,26 @@ def music_from_args(a):
         print(f"Playlist CSV: {avg['tracks']} canciones (promedio bpm={avg['bpm']:.0f}, "
               f"energy={avg['energy']:.2f}, dance={avg['danceability']:.2f}, valence={avg['valence']:.2f})")
         return sensory.music_axes(avg["bpm"], avg["energy"], avg["danceability"], avg["valence"])
+    if a.cancion:
+        result = music_classifier.classify_audio(
+            Path(a.cancion),
+            title=a.titulo_cancion,
+        )
+        if result["override"]:
+            print(
+                f"Cancion especial reconocida: {result['matched_song']} "
+                f"-> preset {result['preset']}"
+            )
+        else:
+            print(
+                f"MLP GTZAN: {result['gtzan_genre']} "
+                f"(confianza {result['confidence']:.1%}) "
+                f"-> preset {result['preset']}"
+            )
+        presets = sensory.load_presets()
+        if result["preset"] not in presets:
+            raise SystemExit(f"Preset desconocido: {result['preset']}")
+        return sensory.music_axes(**presets[result["preset"]])
     if a.preset:
         presets = sensory.load_presets()
         if a.preset.lower() not in presets:

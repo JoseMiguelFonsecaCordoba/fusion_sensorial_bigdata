@@ -7,3 +7,4 @@ services:
     # data/ montado: el CSV va en data/raw/ y los perfiles recalculados se quedan en tu disco
     volumes:
       - ./data:/app/data
+      - ./models:/app/models

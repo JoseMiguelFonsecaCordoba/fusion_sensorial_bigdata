@@ -60,6 +60,8 @@
   .drop:hover, .drop.over { border-color: var(--accent); color: var(--text); }
   .drop img { max-width: 100%; max-height: 140px; border-radius: 8px; display: block; margin: 0 auto 8px; }
   .drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .song-title { width: 100%; margin-bottom: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--text); border-radius: 10px; padding: 9px 10px; font: inherit; font-size: 13px; }
+  .song-status { min-height: 18px; font-size: 12px; color: var(--muted); margin: 8px 0 0; }
 
   .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   select { background: var(--panel-2); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font: inherit; font-size: 13px; }
@@ -122,6 +124,7 @@
       <div class="seg" role="group" aria-label="Modo de música" id="musicMode">
         <button data-v="preset" aria-pressed="true">Género</button>
         <button data-v="manual" aria-pressed="false">Manual</button>
+        <button data-v="upload" aria-pressed="false">Subir canción</button>
         <button data-v="none" aria-pressed="false">Sin música</button>
       </div>
       <div id="m-preset"><div class="chips" id="presets"></div></div>
@@ -130,6 +133,14 @@
         <label class="range">Energía <output id="o-energy"></output><input type="range" id="energy" min="0" max="1" step="0.05" value="0.7"></label>
         <label class="range">Bailabilidad <output id="o-danceability"></output><input type="range" id="danceability" min="0" max="1" step="0.05" value="0.6"></label>
         <label class="range">Alegría (valence) <output id="o-valence"></output><input type="range" id="valence" min="0" max="1" step="0.05" value="0.6"></label>
+      </div>
+      <div id="m-upload" hidden>
+        <input class="song-title" id="songTitle" type="text" placeholder="Titulo y artista (opcional)">
+        <label class="drop" id="songDrop">
+          <input type="file" id="songFile" accept="audio/*,.mp3,.wav,.m4a,.flac,.ogg">
+          <span id="songDropText">Elige o arrastra una canción</span>
+        </label>
+        <p class="song-status" id="songStatus"></p>
       </div>
       <p class="hint" id="m-none" hidden>Solo se usará el color.</p>
     </section>
@@ -195,7 +206,7 @@ const pretty = (s) => String(s).replace(/_/g, " ").replace(/([a-z])([A-Z])/g, "$
 const TYPE = { Hotel: "Hoteles", Restaurant: "Restaurantes", Attractive: "Atractivos" };
 const SWATCHES = ["#ff3300", "#ff8800", "#ffd23f", "#2ecc71", "#1f6966", "#6fa8dc", "#1a365d", "#7c5cff", "#e84393", "#f5f0e6"];
 
-const state = { music: "preset", preset: "reggaeton", colorMode: "hex", image: null };
+const state = { music: "preset", preset: "reggaeton", colorMode: "hex", image: null, songPreset: null };
 let meta, timer, ctrl;
 
 function seg(id, key, onChange) {
@@ -209,6 +220,7 @@ function seg(id, key, onChange) {
 function showModes() {
   $("m-preset").hidden = state.music !== "preset";
   $("m-manual").hidden = state.music !== "manual";
+  $("m-upload").hidden = state.music !== "upload";
   $("m-none").hidden = state.music !== "none";
   $("c-hex").hidden = state.colorMode !== "hex";
   $("c-image").hidden = state.colorMode !== "image";
@@ -224,6 +236,7 @@ function request() {
   };
   if (state.music === "preset") r.preset = state.preset;
   if (state.music === "manual") r.music = Object.fromEntries(["bpm", "energy", "danceability", "valence"].map((k) => [k, +$(k).value]));
+  if (state.music === "upload" && state.songPreset) r.preset = state.songPreset;
   if (state.colorMode === "hex") r.color = $("color").value;
   if (state.colorMode === "image" && state.image) r.image = state.image;
   return r;
@@ -303,6 +316,30 @@ function loadImage(file) {
   reader.readAsDataURL(file);
 }
 
+async function classifySong(file) {
+  if (!file) return;
+  $("songStatus").textContent = "Analizando canción...";
+  const form = new FormData();
+  form.append("song", file);
+  form.append("title", $("songTitle").value.trim());
+  try {
+    const res = await fetch("/api/classify", { method: "POST", body: form });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    state.songPreset = data.preset;
+    if (data.override) {
+      $("songStatus").textContent = `Canción reconocida: ${data.matched_song} -> preset ${data.preset}`;
+    } else {
+      $("songStatus").textContent = `Género GTZAN: ${data.gtzan_genre} · preset: ${data.preset} · confianza: ${(data.confidence * 100).toFixed(0)}%`;
+    }
+    $("songDropText").textContent = `Archivo elegido: ${file.name}`;
+    go();
+  } catch (e) {
+    state.songPreset = null;
+    $("songStatus").textContent = `Error: ${e.message}`;
+  }
+}
+
 async function init() {
   meta = await (await fetch("/api/meta")).json();
   $("presets").innerHTML = Object.keys(meta.presets).map((k) => `<button class="chip" data-p="${esc(k)}" aria-pressed="${k === state.preset}">${esc(k)}</button>`).join("");
@@ -322,6 +359,18 @@ async function init() {
   drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
   drop.addEventListener("dragleave", () => drop.classList.remove("over"));
   drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); loadImage(e.dataTransfer.files[0]); });
+  $("songFile").addEventListener("change", (e) => classifySong(e.target.files[0]));
+  $("songTitle").addEventListener("change", () => {
+    if ($("songFile").files[0]) classifySong($("songFile").files[0]);
+  });
+  const songDrop = $("songDrop");
+  songDrop.addEventListener("dragover", (e) => { e.preventDefault(); songDrop.classList.add("over"); });
+  songDrop.addEventListener("dragleave", () => songDrop.classList.remove("over"));
+  songDrop.addEventListener("drop", (e) => {
+    e.preventDefault();
+    songDrop.classList.remove("over");
+    classifySong(e.dataTransfer.files[0]);
+  });
   seg("musicMode", "music", showModes);
   seg("colorMode", "colorMode", showModes);
   setAccent($("color").value);
