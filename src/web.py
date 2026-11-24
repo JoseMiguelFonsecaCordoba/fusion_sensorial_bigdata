@@ -55,13 +55,14 @@ def recommend(req, units, presets):
     tipo = req.get("tipo") or None
     if tipo is not None and tipo not in TYPES:
         raise ValueError(f"tipo inválido: {tipo}")
+    region = req.get("region") or None
     vista = "destinos" if req.get("vista") == "destinos" else "unidades"
     top = int(_num(req, "top", 1, 30, 6))
 
     profile = sensory.build_profile(music, color, _num(req, "alpha", 0, 1, config.FUSION_ALPHA))
     tau = recommender.intent_vector(profile)
     results = recommender.recommend(units, profile, _num(req, "presupuesto", 0, 1, 0.0), top,
-                                    tipo, vista, bool(req.get("solo_joyas")))
+                                    tipo, vista, bool(req.get("solo_joyas")), region)
     return {
         "profile": {"A": profile.A, "P": profile.P, "W": profile.W, "sources": profile.sources,
                     "palette": (color or {}).get("palette", [])},

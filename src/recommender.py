@@ -67,8 +67,10 @@ def score_units(units, profile, presupuesto=0.0, beta=config.BETA):
     return sorted(scored, key=lambda r: r["score"], reverse=True)
 
 
-def recommend(units, profile, presupuesto=0.0, top=5, tipo=None, vista="unidades", solo_joyas=False):
+def recommend(units, profile, presupuesto=0.0, top=5, tipo=None, vista="unidades",
+              solo_joyas=False, region=None):
     pool = [u for u in units if (tipo is None or u["type"].lower() == tipo.lower())
+            and (region is None or u["region"].lower() == region.lower())
             and (not solo_joyas or u["joya"])]
     ranked = score_units(pool, profile, presupuesto)
     if vista == "unidades":

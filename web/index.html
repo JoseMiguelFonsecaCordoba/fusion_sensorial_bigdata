@@ -183,6 +183,10 @@
           <option value="unidades">Por lugar y tipo</option>
           <option value="destinos">Por destino</option>
         </select>
+        <select id="region" aria-label="Región">
+          <option value="">Todas las regiones</option>
+          <option value="Veracruz">Veracruz</option>
+        </select>
       </div>
       <label class="toggle"><input type="checkbox" id="joyas"> Solo joyas ocultas</label>
     </section>
@@ -232,7 +236,8 @@ function setAccent(hex) { document.documentElement.style.setProperty("--accent",
 function request() {
   const r = {
     presupuesto: +$("presupuesto").value, alpha: +$("alpha").value,
-    tipo: $("tipo").value, vista: $("vista").value, solo_joyas: $("joyas").checked, top: 9,
+    tipo: $("tipo").value, vista: $("vista").value, region: $("region").value,
+    solo_joyas: $("joyas").checked, top: 9,
   };
   if (state.music === "preset") r.preset = state.preset;
   if (state.music === "manual") r.music = Object.fromEntries(["bpm", "energy", "danceability", "valence"].map((k) => [k, +$(k).value]));
@@ -329,6 +334,7 @@ async function classifySong(file) {
     state.songPreset = data.preset;
     if (data.override) {
       $("songStatus").textContent = `Canción reconocida: ${data.matched_song} -> preset ${data.preset}`;
+      $("region").value = data.region || "";
     } else {
       $("songStatus").textContent = `Género GTZAN: ${data.gtzan_genre} · preset: ${data.preset} · confianza: ${(data.confidence * 100).toFixed(0)}%`;
     }

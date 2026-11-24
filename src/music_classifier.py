@@ -30,6 +30,7 @@ SPECIAL_SONGS = (
         "name": "Sembrando flores",
         "aliases": ("sembrando flores", "los cojolines", "cojolines"),
         "preset": "regional",
+        "region": "Veracruz",
     },
 )
 
@@ -102,6 +103,8 @@ def classify_audio(path, title=None, model_path=None):
             "matched_song": special_name,
             "gtzan_genre": "country",
             "preset": special_preset,
+            "region": "Veracruz",
+            "region": "Veracruz",
             "confidence": 1.0,
             "override": True,
         }

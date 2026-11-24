@@ -31,6 +31,7 @@ def parse_args():
     p.add_argument("--presupuesto", type=float, default=0.0,
                    help="0 = el precio no importa ... 1 = máxima importancia al valor/precio bajo")
     p.add_argument("--tipo", choices=["Hotel", "Restaurant", "Attractive"])
+    p.add_argument("--region", help="filtrar por region, por ejemplo Veracruz")
     p.add_argument("--vista", choices=["unidades", "destinos"], default="unidades")
     p.add_argument("--solo-joyas", action="store_true", help="solo 'joyas ocultas'")
     p.add_argument("--top", type=int, default=5)
@@ -100,7 +101,8 @@ def main():
         print("Paleta:", " ".join(color["palette"]))
 
     units = recommender.load_profiles()
-    results = recommender.recommend(units, profile, a.presupuesto, a.top, a.tipo, a.vista, a.solo_joyas)
+    results = recommender.recommend(units, profile, a.presupuesto, a.top, a.tipo, a.vista,
+                                    a.solo_joyas, a.region)
     print(f"\nTop {len(results)} ({a.vista}, presupuesto={a.presupuesto}):\n")
     for i, r in enumerate(results, 1):
         label = r["town"] if a.vista == "destinos" else f"{r['town']} · {r['type']}"
