@@ -7,6 +7,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
 
 from . import config
 from .music_classifier import extract_features
@@ -22,7 +23,10 @@ def load_gtzan(root):
             if path.suffix.lower() not in (".wav", ".au", ".aiff", ".flac", ".ogg", ".mp3"):
                 continue
             try:
-                rows.append(extract_features(path).reshape(-1))
+                features = extract_features(path).reshape(-1)
+                if features.shape != (72,) or not np.isfinite(features).all():
+                    raise ValueError("caracteristicas invalidas")
+                rows.append(features)
                 labels.append(genre_dir.name)
                 tracks += 1
             except Exception as exc:
@@ -50,6 +54,10 @@ def main():
     args = parser.parse_args()
 
     X, y, tracks = load_gtzan(args.dataset)
+    if not np.isfinite(X).all():
+        raise ValueError("La matriz GTZAN contiene valores no finitos")
+    label_encoder = LabelEncoder()
+    y = label_encoder.fit_transform(y)
     train_x, test_x, train_y, test_y = train_test_split(
         X, y, test_size=0.20, random_state=42, stratify=y
     )
@@ -76,7 +84,7 @@ def main():
         {
             "model": model,
             "scaler": scaler,
-            "classes": list(model.classes_),
+            "classes": list(label_encoder.classes_[model.classes_.astype(int)]),
         },
         args.model,
     )

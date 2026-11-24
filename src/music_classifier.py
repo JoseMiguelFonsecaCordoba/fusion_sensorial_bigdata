@@ -76,7 +76,9 @@ def extract_features(path):
     ):
         features.extend(np.mean(matrix, axis=1))
         features.extend(np.std(matrix, axis=1))
-    return np.asarray(features, dtype=np.float32).reshape(1, -1)
+    vector = np.asarray(features, dtype=np.float32).reshape(1, -1)
+    vector = np.nan_to_num(vector, copy=False, nan=0.0, posinf=0.0, neginf=0.0)
+    return vector
 
 
 def load_classifier(model_path=None):
