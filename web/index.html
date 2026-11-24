@@ -337,6 +337,7 @@ async function classifySong(file) {
       $("region").value = data.region || "";
     } else {
       $("songStatus").textContent = `Género GTZAN: ${data.gtzan_genre} · preset: ${data.preset} · confianza: ${(data.confidence * 100).toFixed(0)}%`;
+      $("region").value = "";
     }
     $("songDropText").textContent = `Archivo elegido: ${file.name}`;
     go();
