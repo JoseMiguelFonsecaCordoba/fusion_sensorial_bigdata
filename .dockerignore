@@ -7,3 +7,4 @@ data/raw/*.csv
 spark-warehouse
 metastore_db
 .DS_Store
+data/gtzan/

@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import classification_report
 
 from . import config
 from .music_classifier import extract_features
@@ -69,15 +70,16 @@ def main():
         activation="relu",
         solver="adam",
         alpha=1e-3,
-        batch_size=32,
-        learning_rate_init=1e-3,
-        max_iter=300,
+        batch_size=64,
+        learning_rate_init=5e-4,
+        max_iter=500,
         early_stopping=True,
         validation_fraction=0.15,
         random_state=42,
     )
     model.fit(train_x, train_y)
     accuracy = model.score(test_x, test_y)
+    predictions = model.predict(test_x)
 
     args.model.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(
@@ -90,6 +92,14 @@ def main():
     )
     print(f"Archivos procesados: {tracks}")
     print(f"Precision de prueba: {accuracy:.1%}")
+    print("\nPrecision por genero:")
+    print(classification_report(
+        test_y,
+        predictions,
+        target_names=label_encoder.classes_,
+        digits=3,
+        zero_division=0,
+    ))
     print(f"Modelo guardado en: {args.model}")
 
 
